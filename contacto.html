@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Galería Lavalle</title>
+  <meta name="description" content="Contáctanos en Galería Lavalle. Formulario de contacto, chat bot, ubicación y toda la información para visitarnos.">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏬</text></svg>">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo" aria-label="Galería Lavalle - Inicio">
+          <span>🏬</span>
+          <span>Galería Lavalle</span>
+        </a>
+        
+        <nav role="navigation" aria-label="Navegación principal">
+          <ul class="nav-list" id="nav-list">
+            <li><a href="index.html" class="nav-link">Inicio</a></li>
+            <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+            <li><a href="entretenimientos.html" class="nav-link">Entretenimientos</a></li>
+            <li><a href="locales.html" class="nav-link">Locales</a></li>
+            <li><a href="ofertas.html" class="nav-link">Ofertas</a></li>
+            <li><a href="gastronomia.html" class="nav-link">Gastronomía</a></li>
+            <li><a href="contacto.html" class="nav-link active" aria-current="page">Contacto</a></li>
+          </ul>
+          
+          <button class="mobile-nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menú de navegación">
+            ☰
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" style="min-height: 40vh;">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Contacto</h1>
+          <p>¿Tienes alguna pregunta? Estamos aquí para ayudarte. Contáctanos o visita nuestro asistente virtual.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-content">
+              <h2>📍 Ubicación</h2>
+              <p><strong>Dirección:</strong> Lavalle 1498, CABA</p>
+              <p><strong>Entre:</strong> Paraná y Uruguay</p>
+              <p><strong>Transporte:</strong></p>
+              <ul>
+                <li>Subte: Línea B (Estación Uruguay)</li>
+                <li>Colectivos: 5, 6, 7, 23, 50, 99</li>
+              </ul>
+              
+              <h3>🕒 Horarios</h3>
+              <ul>
+                <li><strong>Lun-Sáb:</strong> 10:00 - 22:00</li>
+                <li><strong>Domingos:</strong> 12:00 - 21:00</li>
+                <li><strong>Feriados:</strong> 14:00 - 20:00</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h2>📞 Contacto Directo</h2>
+              <p><strong>Teléfono:</strong> +54 11 1234-5678</p>
+              <p><strong>WhatsApp:</strong> +54 9 11 1234-5678</p>
+              <p><strong>Email:</strong> info@galeria-lavalle.com</p>
+              
+              <h3>🏢 Administración</h3>
+              <p><strong>Comercial:</strong> comercial@galeria-lavalle.com</p>
+              <p><strong>Eventos:</strong> eventos@galeria-lavalle.com</p>
+              <p><strong>Prensa:</strong> prensa@galeria-lavalle.com</p>
+              
+              <h3>🌐 Redes Sociales</h3>
+              <p>
+                <a href="#" aria-label="Facebook">Facebook</a> | 
+                <a href="#" aria-label="Instagram">Instagram</a> | 
+                <a href="#" aria-label="Twitter">Twitter</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="section" style="background: #f8fafc;">
+      <div class="container">
+        <h2 class="section-title">Envíanos un Mensaje</h2>
+        
+        <form class="card" style="max-width: 600px; margin: 0 auto;" id="contact-form" novalidate>
+          <div class="card-content">
+            <div class="form-group">
+              <label for="name" class="form-label">Nombre completo *</label>
+              <input type="text" id="name" name="name" class="form-input" required aria-describedby="name-error">
+              <div id="name-error" class="form-error" role="alert"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email *</label>
+              <input type="email" id="email" name="email" class="form-input" required aria-describedby="email-error">
+              <div id="email-error" class="form-error" role="alert"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone" class="form-label">Teléfono</label>
+              <input type="tel" id="phone" name="phone" class="form-input">
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label">Asunto *</label>
+              <select id="subject" name="subject" class="form-input" required aria-describedby="subject-error">
+                <option value="">Selecciona un asunto</option>
+                <option value="info">Información general</option>
+                <option value="local">Consulta sobre locales</option>
+                <option value="evento">Organizar evento</option>
+                <option value="queja">Queja o reclamo</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="otro">Otro</option>
+              </select>
+              <div id="subject-error" class="form-error" role="alert"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Mensaje *</label>
+              <textarea id="message" name="message" class="form-textarea" required aria-describedby="message-error" placeholder="Escribe tu mensaje aquí..."></textarea>
+              <div id="message-error" class="form-error" role="alert"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Enviar Mensaje
+            </button>
+
+            <div id="form-status" aria-live="polite" style="margin-top: 1rem;"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Chatbot/FAQ -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Asistente Virtual</h2>
+        
+        <div class="chatbot-container">
+          <div class="chatbot-header">
+            <h3>💬 Chat de Ayuda</h3>
+            <p>Pregúntame sobre horarios, ubicación, locales y más</p>
+          </div>
+          
+          <div class="chatbot-messages" id="chat-messages">
+            <div class="message bot-message">
+              <p>¡Hola! Soy el asistente virtual de Galería Lavalle. ¿En qué puedo ayudarte?</p>
+              <div class="quick-buttons">
+                <button type="button" class="btn btn-secondary" onclick="sendQuickMessage('horarios')">Horarios</button>
+                <button type="button" class="btn btn-secondary" onclick="sendQuickMessage('ubicacion')">Ubicación</button>
+                <button type="button" class="btn btn-secondary" onclick="sendQuickMessage('locales')">Locales</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="chatbot-input-container">
+            <input type="text" id="chat-input" class="chatbot-input" placeholder="Escribe tu pregunta..." aria-label="Mensaje para el chatbot">
+            <button type="button" class="btn btn-primary" onclick="sendMessage()">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" style="background: #f8fafc;">
+      <div class="container">
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              ¿Cuáles son los horarios de la galería?
+              <span aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Nuestros horarios son:</p>
+              <ul>
+                <li><strong>Lunes a Sábados:</strong> 10:00 - 22:00</li>
+                <li><strong>Domingos:</strong> 12:00 - 21:00</li>
+                <li><strong>Feriados:</strong> 14:00 - 20:00</li>
+              </ul>
+              <p>Los horarios pueden variar por local individual.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              ¿El estacionamiento es gratuito?
+              <span aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Sí, ofrecemos estacionamiento gratuito las primeras 3 horas. Después de ese tiempo, se aplican tarifas preferenciales para clientes de la galería.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              ¿Cómo llego en transporte público?
+              <span aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Puedes llegar fácilmente:</p>
+              <ul>
+                <li><strong>Subte:</strong> Línea B, Estación Uruguay (2 cuadras)</li>
+                <li><strong>Colectivos:</strong> Líneas 5, 6, 7, 23, 50, 99</li>
+                <li><strong>Ubicación:</strong> Lavalle 1498, entre Paraná y Uruguay</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              ¿Hay WiFi gratuito?
+              <span aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Sí, tenemos WiFi gratuito de alta velocidad en toda la galería. La red se llama "GaleriaLavalle_Free" y no requiere contraseña.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              ¿La galería es accesible para personas con discapacidad?
+              <span aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutamente. Contamos con:</p>
+              <ul>
+                <li>Rampas de acceso en todas las entradas</li>
+                <li>Ascensores con audio y braille</li>
+                <li>Baños adaptados</li>
+                <li>Estacionamiento reservado</li>
+                <li>Personal capacitado para asistencia</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Galería Lavalle</h3>
+          <p>📍 Lavalle 1498, CABA</p>
+          <p>📞 +54 11 1234-5678</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Horarios</h3>
+          <ul>
+            <li>Lunes a Sábados: 10:00 - 22:00</li>
+            <li>Domingos: 12:00 - 21:00</li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="locales.html">Locales</a></li>
+            <li><a href="ofertas.html">Ofertas</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Síguenos</h3>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Galería Lavalle. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileToggle = document.querySelector('.mobile-nav-toggle');
+      const navList = document.querySelector('.nav-list');
+      
+      if (mobileToggle && navList) {
+        mobileToggle.addEventListener('click', function() {
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !isExpanded);
+          navList.classList.toggle('active');
+          this.textContent = isExpanded ? '☰' : '✕';
+        });
+      }
+
+      // FAQ functionality
+      document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', function() {
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          const answer = this.nextElementSibling;
+          const icon = this.querySelector('span');
+          
+          this.setAttribute('aria-expanded', !isExpanded);
+          answer.classList.toggle('active');
+          icon.textContent = isExpanded ? '+' : '−';
+        });
+      });
+
+      // Contact form validation
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const subject = document.getElementById('subject');
+        const message = document.getElementById('message');
+        
+        let isValid = true;
+        
+        // Validate name
+        if (!name.value.trim()) {
+          showError('name', 'El nombre es requerido');
+          isValid = false;
+        } else {
+          clearError('name');
+        }
+        
+        // Validate email
+        if (!email.value.trim()) {
+          showError('email', 'El email es requerido');
+          isValid = false;
+        } else if (!isValidEmail(email.value)) {
+          showError('email', 'Ingresa un email válido');
+          isValid = false;
+        } else {
+          clearError('email');
+        }
+        
+        // Validate subject
+        if (!subject.value) {
+          showError('subject', 'Selecciona un asunto');
+          isValid = false;
+        } else {
+          clearError('subject');
+        }
+        
+        // Validate message
+        if (!message.value.trim()) {
+          showError('message', 'El mensaje es requerido');
+          isValid = false;
+        } else {
+          clearError('message');
+        }
+        
+        if (isValid) {
+          document.getElementById('form-status').innerHTML = 
+            '<div class="form-success">✅ Mensaje enviado correctamente. Te contactaremos pronto.</div>';
+          form.reset();
+        }
+      });
+    });
+
+    function showError(fieldId, message) {
+      const field = document.getElementById(fieldId);
+      const errorDiv = document.getElementById(fieldId + '-error');
+      field.classList.add('error');
+      errorDiv.textContent = message;
+    }
+
+    function clearError(fieldId) {
+      const field = document.getElementById(fieldId);
+      const errorDiv = document.getElementById(fieldId + '-error');
+      field.classList.remove('error');
+      errorDiv.textContent = '';
+    }
+
+    function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // Chatbot functionality
+    function sendMessage() {
+      const input = document.getElementById('chat-input');
+      const message = input.value.trim();
+      
+      if (message) {
+        addMessage(message, 'user');
+        input.value = '';
+        
+        setTimeout(() => {
+          const response = getBotResponse(message);
+          addMessage(response, 'bot');
+        }, 1000);
+      }
+    }
+
+    function sendQuickMessage(type) {
+      const messages = {
+        'horarios': '¿Cuáles son los horarios?',
+        'ubicacion': '¿Dónde están ubicados?',
+        'locales': '¿Qué locales tienen?'
+      };
+      
+      const message = messages[type];
+      addMessage(message, 'user');
+      
+      setTimeout(() => {
+        const response = getBotResponse(message);
+        addMessage(response, 'bot');
+      }, 1000);
+    }
+
+    function addMessage(text, sender) {
+      const messagesContainer = document.getElementById('chat-messages');
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `message ${sender}-message`;
+      messageDiv.innerHTML = `<p>${text}</p>`;
+      messagesContainer.appendChild(messageDiv);
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    function getBotResponse(message) {
+      const lowerMessage = message.toLowerCase();
+      
+      if (lowerMessage.includes('horario')) {
+        return 'Nuestros horarios son: Lunes a Sábados de 10:00 a 22:00, Domingos de 12:00 a 21:00.';
+      } else if (lowerMessage.includes('ubicacion') || lowerMessage.includes('donde')) {
+        return 'Estamos en Lavalle 1498, CABA, entre Paraná y Uruguay. Cerca del subte línea B, estación Uruguay.';
+      } else if (lowerMessage.includes('local') || lowerMessage.includes('tienda')) {
+        return 'Tenemos más de 50 locales incluyendo Focuz Barbería, CuevaGeeks y muchos más. ¿Te interesa algún rubro en particular?';
+      } else if (lowerMessage.includes('estacionamiento')) {
+        return 'Sí, tenemos estacionamiento gratuito las primeras 3 horas. Después aplicamos tarifas preferenciales.';
+      } else if (lowerMessage.includes('wifi')) {
+        return 'Tenemos WiFi gratuito en toda la galería. La red es "GaleriaLavalle_Free" sin contraseña.';
+      } else {
+        return 'Gracias por tu consulta. Para información más específica, puedes contactarnos al +54 11 1234-5678 o visitar nuestro centro de atención.';
+      }
+    }
+
+    // Enter key for chat
+    document.getElementById('chat-input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+  </script>
+</body>
+</html>

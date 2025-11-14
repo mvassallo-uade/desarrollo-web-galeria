@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CuevaGeeks | Promociones</title>
+  <link rel="stylesheet" href="game_store.css">
+
+</head>
+<body data-page="promos">
+  <header>
+    <a href="index.html" class="logo">
+      <img src="img/logo.png" alt="CuevaGeeks logo" width="48" height="48">
+      <span>CuevaGeeks</span>
+    </a>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about_games.html">Nosotros</a></li>
+        <li><a href="products_games.html">Productos</a></li>
+        <li><a href="contact_games.html">Contacto</a></li>
+        <li><a href="promociones.html">Promociones</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section">
+      <h1 class="section-title">Promociones vigentes</h1>
+      <p class="section-content">Elegí producto y cantidad para ver el descuento aplicado automáticamente. Los resultados se actualizan al instante.</p>
+    </div>
+  <div class="cards">
+
+    <article class="card" aria-labelledby="promoA">
+      <div class="card-content">
+        <h2 id="promoA" class="card-title">
+          Llevá 2 y obtené 50% en el segundo <span class="promo-badge">Accesorios</span>
+        </h2>
+        <p class="card-description">
+          Aplica por pares del mismo producto. Por cada 2 accesorios, el segundo tiene 50% de descuento.
+        </p>
+
+        <form class="form-promo" id="formA">
+          <div class="form-group">
+            <label for="productoA">Accesorio</label>
+            <select id="productoA" name="productoA">
+              <option value="DualSense" data-price="80000">Joystick DualSense PS5 — $80.000</option>
+              <option value="HyperX Cloud" data-price="65000">Auriculares HyperX Cloud — $65.000</option>
+              <option value="Logitech G502" data-price="52000">Mouse gamer Logitech G502 — $52.000</option>
+              <option value="Alfombrilla XL" data-price="12000">Alfombrilla XL — $12.000</option>
+              <option value="Dock Carga PS5" data-price="39000">Dock de carga PS5 — $39.000</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cantidadA">Cantidad</label>
+            <input type="number" id="cantidadA" name="cantidadA" min="1" value="1" required>
+          </div>
+        </form>
+
+        <div class="section-content results" aria-live="polite">
+          <p><strong>Total sin descuento:</strong> <span id="subtotalA">$0</span></p>
+          <p><strong>Descuento aplicado:</strong> <span id="descuentoA">$0</span></p>
+          <p><strong>Total final:</strong> <span id="totalA">$0</span></p>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" aria-labelledby="promoB">
+  <div class="card-content">
+    <h2 id="promoB" class="card-title">
+      3x2 en juegos seleccionados <span class="promo-badge">Juegos</span>
+    </h2>
+    <p class="card-description">
+      Elegí tres juegos (podés repetir). <strong>El más barato de los tres sale gratis.</strong>
+    </p>
+
+    <form class="form-promo" id="formB">
+      <div class="form-group">
+        <label for="productoB1">Juego 1</label>
+        <select id="productoB1" name="productoB1">
+          <option value="" data-price="0">— Elegí un juego —</option>
+          <option value="Ghost of Yotei" data-price="35000">Ghost of Yotei — $35.000</option>
+          <option value="God of War" data-price="40000">God of War — $40.000</option>
+          <option value="The Last Of Us II" data-price="50000">The Last Of Us II — $50.000</option>
+          <option value="Ratchet and Clank" data-price="55000">Ratchet and Clank — $55.000</option>
+          <option value="Armored Core VI" data-price="45000">Armored Core VI — $45.000</option>
+          <option value="Elden Ring" data-price="30000">Elden Ring — $30.000</option>
+          <option value="Cyberpunk 2077" data-price="50000">Cyberpunk 2077 — $50.000</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="productoB2">Juego 2</label>
+        <select id="productoB2" name="productoB2">
+          <option value="" data-price="0">— Elegí un juego —</option>
+          <option value="Ghost of Yotei" data-price="35000">Ghost of Yotei — $35.000</option>
+          <option value="God of War" data-price="40000">God of War — $40.000</option>
+          <option value="The Last Of Us II" data-price="50000">The Last Of Us II — $50.000</option>
+          <option value="Ratchet and Clank" data-price="55000">Ratchet and Clank — $55.000</option>
+          <option value="Armored Core VI" data-price="45000">Armored Core VI — $45.000</option>
+          <option value="Elden Ring" data-price="30000">Elden Ring — $30.000</option>
+          <option value="Cyberpunk 2077" data-price="50000">Cyberpunk 2077 — $50.000</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="productoB3">Juego 3</label>
+        <select id="productoB3" name="productoB3">
+          <option value="" data-price="0">— Elegí un juego —</option>
+          <option value="Ghost of Yotei" data-price="35000">Ghost of Yotei — $35.000</option>
+          <option value="God of War" data-price="40000">God of War — $40.000</option>
+          <option value="The Last Of Us II" data-price="50000">The Last Of Us II — $50.000</option>
+          <option value="Ratchet and Clank" data-price="55000">Ratchet and Clank — $55.000</option>
+          <option value="Armored Core VI" data-price="45000">Armored Core VI — $45.000</option>
+          <option value="Elden Ring" data-price="30000">Elden Ring — $30.000</option>
+          <option value="Cyberpunk 2077" data-price="50000">Cyberpunk 2077 — $50.000</option>
+        </select>
+      </div>
+    </form>
+
+    <div class="section-content results" aria-live="polite">
+      <p><strong>Total sin descuento:</strong> <span id="subtotalB">$0</span></p>
+      <p><strong>Descuento aplicado:</strong> <span id="descuentoB">$0</span></p>
+      <p><strong>Total final:</strong> <span id="totalB">$0</span></p>
+    </div>
+  </div>
+</article>
+
+    <article class="card" aria-labelledby="promoC">
+      <div class="card-content">
+        <h2 id="promoC" class="card-title">
+          10% OFF por compras superiores a $30.000 <span class="promo-badge">Bundles/Consolas</span>
+        </h2>
+        <p class="card-description">
+          Si el subtotal supera los $900.000, se aplica 10% de descuento automáticamente.
+        </p>
+
+        <form class="form-promo" id="formC">
+          <div class="form-group">
+            <label for="productoC">Producto</label>
+            <select id="productoC" name="productoC">
+              <option value="PS5" data-price="700000">Consola PS5 — $700.000</option>
+              <option value="Switch OLED" data-price="650000">Nintendo Switch OLED — $650.000</option>
+              <option value="Xbox Series S" data-price="420000">Xbox Series S — $420.000</option>
+              <option value="Bundle PS5 SM2" data-price="850000">Bundle PS5 + Spider-Man 2 — $850.000</option>
+              <option value="Gift Card 50k" data-price="50000">Gift Card — $50.000</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cantidadC">Cantidad</label>
+            <input type="number" id="cantidadC" name="cantidadC" min="1" value="1" required>
+          </div>
+        </form>
+
+        <div class="section-content results" aria-live="polite">
+          <p><strong>Total sin descuento:</strong> <span id="subtotalC">$0</span></p>
+          <p><strong>Descuento aplicado:</strong> <span id="descuentoC">$0</span></p>
+          <p><strong>Total final:</strong> <span id="totalC">$0</span></p>
+        </div>
+      </div>
+    </article>
+  </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CuevaGeeks. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="promociones.js"></script>
+</body>
+</html>

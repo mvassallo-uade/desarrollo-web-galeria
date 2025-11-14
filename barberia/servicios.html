@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Focuz Barbería | Servicios</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --bg: #0b0f12;
+      --blue-deep: #0f3d63;
+      --blue: #2563eb
+    }
+
+    .font-title {
+      font-family: "Bebas Neue", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif
+    }
+  </style>
+</head>
+
+<body class="bg-[#0b0f12] text-slate-50">
+  <header class="sticky top-0 z-50 bg-[#0b0f12]/80 backdrop-blur">
+    <nav class="mx-auto max-w-6xl px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/img/logo-focuz.png" alt="Logo Focuz Barbería" class="h-9 w-auto">
+          <span class="font-title text-2xl tracking-wide">Focuz Barbería</span>
+        </a>
+        <ul class="hidden md:flex items-center gap-6 text-sm">
+          <li><a href="index.html" class="hover:text-[#2563eb]">Inicio</a></li>
+          <li><a href="nosotros.html" class="hover:text-[#2563eb]">Nosotros</a></li>
+          <li><a aria-current="page" href="servicios.html"
+              class="border-b-2 border-[#2563eb] text-[#2563eb] pb-1">Productos/Servicios</a></li>
+          <li><a href="promociones.html" class="hover:text-[#2563eb]">Promociones</a></li>
+          <li><a href="reservar.html" class="hover:text-[#2563eb]">Reservar</a></li>
+          <li><a href="contacto.html" class="hover:text-[#2563eb]">Contacto</a></li>
+        </ul>
+        <details class="md:hidden">
+          <summary class="list-none cursor-pointer px-3 py-2 rounded bg-slate-800/80">Menú</summary>
+          <ul class="absolute right-4 mt-2 w-48 rounded bg-slate-900/95 p-2 space-y-1">
+            <li><a href="index.html" class="block px-3 py-2 rounded hover:bg-slate-800">Inicio</a></li>
+            <li><a href="nosotros.html" class="block px-3 py-2 rounded hover:bg-slate-800">Nosotros</a></li>
+            <li><a aria-current="page" href="servicios.html"
+                class="block px-3 py-2 rounded text-[#2563eb]">Productos/Servicios</a></li>
+            <li><a href="promociones.html" class="block px-3 py-2 rounded hover:bg-slate-800">Promociones</a></li>
+            <li><a href="reservar.html" class="block px-3 py-2 rounded hover:bg-slate-800">Reservar</a></li>
+            <li><a href="contacto.html" class="block px-3 py-2 rounded hover:bg-slate-800">Contacto</a></li>
+          </ul>
+        </details>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-16">
+    <h1 class="font-title text-5xl mb-8">Servicios</h1>
+
+    <h2 class="text-2xl font-semibold mb-4">Cortes</h2>
+    <div class="grid gap-6 sm:grid-cols-2">
+      <article class="rounded-xl border border-slate-800 bg-slate-900/40 overflow-hidden">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1677444491957-ab1e8b9a80fd?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Corte de pelo" class="h-60 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Corte de pelo</h3>
+          <p class="mt-1 text-sm text-slate-400">30 min</p>
+          <p class="mt-2 text-slate-300">Corte de pelo</p>
+          <p class="mt-4 text-[#2563eb] font-semibold">12.700 ARS</p>
+        </div>
+      </article>
+      <article class="rounded-xl border border-slate-800 bg-slate-900/40 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Corte y barba" class="h-60 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Corte y barba</h3>
+          <p class="mt-1 text-sm text-slate-400">1 h</p>
+          <p class="mt-2 text-slate-300">Corte de pelo + barba</p>
+          <p class="mt-4 text-[#2563eb] font-semibold">15.700 ARS</p>
+        </div>
+      </article>
+      <article class="rounded-xl border border-slate-800 bg-slate-900/40 overflow-hidden">
+        <img src="https://cdn.wisebarber.com/wisebarber/images/082o254c27bzcgr.jpg?width=1400&quality=60"
+          alt="Corte con diseño" class="h-60 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Corte con diseño</h3>
+          <p class="mt-1 text-sm text-slate-400">30 min</p>
+          <p class="mt-2 text-slate-300">Corte de pelo + diseño</p>
+          <p class="mt-4 text-[#2563eb] font-semibold">13.000 ARS</p>
+        </div>
+      </article>
+      <article class="rounded-xl border border-slate-800 bg-slate-900/40 overflow-hidden">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1661493935776-a76a3e33dddf?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Arreglo de barba" class="h-60 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Barba</h3>
+          <p class="mt-1 text-sm text-slate-400">30 min</p>
+          <p class="mt-2 text-slate-300">Únicamente barba</p>
+          <p class="mt-4 text-[#2563eb] font-semibold">10.000 ARS</p>
+        </div>
+      </article>
+      <article class="rounded-xl border border-slate-800 bg-slate-900/40 overflow-hidden">
+        <img
+          src="https://hips.hearstapps.com/hmg-prod/images/afeitadora-skull-rapado-hombre-oferta-amazon-65f42c11086f6.jpg"
+          alt="Rapado" class="h-60 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Rapado</h3>
+          <p class="mt-1 text-sm text-slate-400">30 min</p>
+          <p class="mt-2 text-slate-300">Únicamente rapado</p>
+          <p class="mt-4 text-[#2563eb] font-semibold">7.700 ARS</p>
+        </div>
+      </article>
+    </div>
+
+    <h2 class="text-2xl font-semibold mt-12 mb-4">Ceras</h2>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <article class="rounded-xl border border-slate-800 bg-slate-900/40 overflow-hidden">
+        <img src="https://theholyblack.com/cdn/shop/files/P1235140_600x.jpg?v=1753976444" alt="Cera mate"
+          class="h-40 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Cera Mate</h3>
+          <p class="mt-2 text-slate-300">Terminación natural con fijación media.</p>
+          <p class="mt-4 text-[#2563eb] font-semibold">10.000 ARS</p>
+        </div>
+      </article>
+      <article class="rounded-xl border border-slate-800 bg-slate-900/40 overflow-hidden">
+        <img src="https://cdn.faire.com/fastly/174b15d4aa2decb53a19642a7cbcb89b8da80bc8f419d7e396e06534eafe4250.jpeg"
+          alt="Cera fijación extrema" class="h-40 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Fijación extrema</h3>
+          <p class="mt-2 text-slate-300">Control máximo para estilos definidos.</p>
+          <p class="mt-4 text-[#2563eb] font-semibold">10.000 ARS</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="mt-12">
+      <a href="reservar.html"
+        class="inline-block bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-6 py-3 rounded-md font-semibold">Reservar
+        turno</a>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-800">
+    <div class="mx-auto max-w-6xl px-4 py-8 flex flex-col md:flex-row items-center md:justify-between gap-4">
+      <p class="text-slate-400">Lavalle 1498, Local 35 • Lunes a sábados de 10 a 20 hs</p>
+      <p class="text-slate-400">© Focuz Barbería</p>
+    </div>
+  </footer>
+</body>
+
+</html>

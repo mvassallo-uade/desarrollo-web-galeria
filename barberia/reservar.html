@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Focuz Barbería | Reservar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --bg: #0b0f12;
+      --blue-deep: #0f3d63;
+      --blue: #2563eb
+    }
+
+    .font-title {
+      font-family: "Bebas Neue", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif
+    }
+  </style>
+</head>
+
+<body class="bg-[#0b0f12] text-slate-50">
+  <header class="sticky top-0 z-50 bg-[#0b0f12]/80 backdrop-blur">
+    <nav class="mx-auto max-w-6xl px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/img/logo-focuz.png" alt="Logo Focuz Barbería" class="h-9 w-auto">
+          <span class="font-title text-2xl tracking-wide">Focuz Barbería</span>
+        </a>
+        <ul class="hidden md:flex items-center gap-6 text-sm">
+          <li><a href="index.html" class="hover:text-[#2563eb]">Inicio</a></li>
+          <li><a href="nosotros.html" class="hover:text-[#2563eb]">Nosotros</a></li>
+          <li><a href="servicios.html" class="hover:text-[#2563eb]">Productos/Servicios</a></li>
+          <li><a href="promociones.html" class="hover:text-[#2563eb]">Promociones</a></li>
+          <li><a aria-current="page" href="reservar.html"
+              class="border-b-2 border-[#2563eb] text-[#2563eb] pb-1">Reservar</a></li>
+          <li><a href="contacto.html" class="hover:text-[#2563eb]">Contacto</a></li>
+        </ul>
+        <details class="md:hidden">
+          <summary class="list-none cursor-pointer px-3 py-2 rounded bg-slate-800/80">Menú</summary>
+          <ul class="absolute right-4 mt-2 w-48 rounded bg-slate-900/95 p-2 space-y-1">
+            <li><a href="index.html" class="block px-3 py-2 rounded hover:bg-slate-800">Inicio</a></li>
+            <li><a href="nosotros.html" class="block px-3 py-2 rounded hover:bg-slate-800">Nosotros</a></li>
+            <li><a href="servicios.html" class="block px-3 py-2 rounded hover:bg-slate-800">Productos/Servicios</a></li>
+            <li><a href="promociones.html" class="block px-3 py-2 rounded hover:bg-slate-800">Promociones</a></li>
+            <li><a aria-current="page" href="reservar.html" class="block px-3 py-2 rounded text-[#2563eb]">Reservar</a>
+            </li>
+            <li><a href="contacto.html" class="block px-3 py-2 rounded hover:bg-slate-800">Contacto</a></li>
+          </ul>
+        </details>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-16">
+    <div class="grid lg:grid-cols-1 gap-10">
+      <div>
+        <h1 class="font-title text-5xl mb-6">Reservar turno</h1>
+        <p class="text-slate-300">Horarios de atención: lunes a sábados de 10 a 20 hs.</p>
+        <form action="#" method="post" class="mt-8 grid gap-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label for="nombre" class="block text-sm text-slate-300 mb-1">Nombre y apellido</label>
+              <input id="nombre" name="nombre" type="text" required
+                class="w-full rounded-md border border-slate-700 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#2563eb] text-slate-500">
+            </div>
+            <div>
+              <label for="telefono" class="block text-sm text-slate-300 mb-1">Teléfono</label>
+              <input id="telefono" name="telefono" type="tel" required
+                class="w-full rounded-md border border-slate-700 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#2563eb] text-slate-500">
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label for="email" class="block text-sm text-slate-300 mb-1">Email</label>
+              <input id="email" name="email" type="email" required
+                class="w-full rounded-md border border-slate-700 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#2563eb] text-slate-500">
+            </div>
+            <div>
+              <label for="servicio" class="block text-sm text-slate-300 mb-1">Servicio</label>
+              <select id="servicio" name="servicio" required
+                class="w-full rounded-md border border-slate-700 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#2563eb] text-slate-500">
+                <option value="">Seleccionar</option>
+                <option>Corte de pelo</option>
+                <option>Corte y barba</option>
+                <option>Corte con diseño</option>
+                <option>Barba</option>
+                <option>Rapado</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label for="fecha" class="block text-sm text-slate-300 mb-1">Fecha</label>
+              <input id="fecha" name="fecha" type="date" required
+                class="w-full rounded-md border border-slate-700 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#2563eb] text-slate-500">
+            </div>
+            <div>
+              <label for="hora" class="block text-sm text-slate-300 mb-1">Hora disponible</label>
+              <select id="hora" name="hora" required
+                class="w-full rounded-md border border-slate-700 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#2563eb] text-slate-500">
+                <option value="">Seleccionar</option>
+                <option>10:00</option>
+                <option>11:00</option>
+                <option>12:00</option>
+                <option>14:00</option>
+                <option>16:00</option>
+                <option>18:00</option>
+                <option>19:00</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="nota" class="block text-sm text-slate-300 mb-1">Notas</label>
+            <textarea id="nota" name="nota" rows="4"
+              class="w-full rounded-md border border-slate-700 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#2563eb] text-slate-500"
+              placeholder="Referencias de estilo, preferencia de barbero"></textarea>
+          </div>
+          <div class="flex items-center gap-3">
+            <input id="terminos" type="checkbox" required class="h-4 w-4 rounded border-slate-700 bg-slate-900">
+            <label for="terminos" class="text-sm text-slate-300">Acepto ser contactado para confirmar el turno</label>
+          </div>
+          <button type="button"
+            class="mt-2 bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-6 py-3 rounded-md font-semibold">Solicitar
+            reserva</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-800">
+    <div class="mx-auto max-w-6xl px-4 py-8 flex flex-col md:flex-row items-center md:justify-between gap-4">
+      <p class="text-slate-400">Lavalle 1498, Local 35 • Lunes a sábados de 10 a 20 hs</p>
+      <p class="text-slate-400">© Focuz Barbería</p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Focuz Barbería | Inicio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --bg: #0b0f12;
+      --blue-deep: #0f3d63;
+      --blue: #2563eb
+    }
+
+    .font-title {
+      font-family: "Bebas Neue", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif
+    }
+  </style>
+</head>
+
+<body class="bg-[#0b0f12] text-slate-50">
+  <header class="sticky top-0 z-50 bg-[#0b0f12]/80 backdrop-blur">
+    <nav class="mx-auto max-w-6xl px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/img/logo-focuz.png" alt="Logo Focuz Barbería" class="h-9 w-auto">
+          <span class="font-title text-2xl tracking-wide">Focuz Barbería</span>
+        </a>
+        <ul class="hidden md:flex items-center gap-6 text-sm">
+          <li><a aria-current="page" href="index.html"
+              class="border-b-2 border-[#2563eb] text-[#2563eb] pb-1">Inicio</a></li>
+          <li><a href="nosotros.html" class="hover:text-[#2563eb]">Nosotros</a></li>
+          <li><a href="servicios.html" class="hover:text-[#2563eb]">Productos/Servicios</a></li>
+          <li><a href="promociones.html" class="hover:text-[#2563eb]">Promociones</a></li>
+          <li><a href="reservar.html" class="hover:text-[#2563eb]">Reservar</a></li>
+          <li><a href="contacto.html" class="hover:text-[#2563eb]">Contacto</a></li>
+        </ul>
+        <details class="md:hidden">
+          <summary class="list-none cursor-pointer px-3 py-2 rounded bg-slate-800/80">Menú</summary>
+          <ul class="absolute right-4 mt-2 w-48 rounded bg-slate-900/95 p-2 space-y-1">
+            <li><a aria-current="page" href="index.html" class="block px-3 py-2 rounded text-[#2563eb]">Inicio</a></li>
+            <li><a href="nosotros.html" class="block px-3 py-2 rounded hover:bg-slate-800">Nosotros</a></li>
+            <li><a href="servicios.html" class="block px-3 py-2 rounded hover:bg-slate-800">Productos/Servicios</a></li>
+            <li><a href="promociones.html" class="block px-3 py-2 rounded hover:bg-slate-800">Promociones</a></li>
+            <li><a href="reservar.html" class="block px-3 py-2 rounded hover:bg-slate-800">Reservar</a></li>
+            <li><a href="contacto.html" class="block px-3 py-2 rounded hover:bg-slate-800">Contacto</a></li>
+          </ul>
+        </details>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="relative">
+      <img
+        src="https://plus.unsplash.com/premium_photo-1677444546739-21b8aad351d4?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Ambiente de barbería moderna" class="h-[68vh] md:h-[75vh] w-full object-cover">
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div class="absolute inset-0 flex items-center">
+        <div class="mx-auto max-w-6xl px-4">
+          <h1 class="font-title text-6xl md:text-7xl leading-none">Estilo. Precisión. Actitud.</h1>
+          <p class="mt-4 max-w-xl text-slate-200">Cortes modernos y clásicos, afeitados prolijos y productos de alta
+            durabilidad. Tu mejor estilo, a tu alcance.</p>
+          <div class="mt-8">
+            <a href="servicios.html"
+              class="inline-block ml-3 border border-slate-500 hover:border-slate-300 text-slate-100 px-6 py-3 rounded-md">Ver
+              servicios</a>
+            <a href="reservar.html"
+              class="inline-block ml-3 border border-slate-500 hover:border-slate-300 text-slate-100 px-6 py-3 rounded-md">Reservar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-4 py-16">
+      <h2 class="font-title text-4xl mb-8">Servicios destacados</h2>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-xl border border-slate-800 bg-slate-900/40 overflow-hidden">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1677444491957-ab1e8b9a80fd?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Corte de pelo moderno" class="h-40 w-full object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Corte de pelo</h3>
+            <p class="mt-2 text-slate-300">Limpio y a medida de tu estilo.</p>
+            <p class="mt-4 text-[#2563eb] font-semibold">Desde 12.700 ARS</p>
+          </div>
+        </article>
+        <article class="rounded-xl border border-slate-800 bg-slate-900/40 overflow-hidden">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1664303521711-bff2aee233b7?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmVhcmQlMjBjdXR8ZW58MHx8MHx8fDA%3D"
+            alt="Corte y barba" class="h-40 w-full object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Corte y barba</h3>
+            <p class="mt-2 text-slate-300">Look completo con definición.</p>
+            <p class="mt-4 text-[#2563eb] font-semibold">Desde 15.700 ARS</p>
+          </div>
+        </article>
+        <article class="rounded-xl border border-slate-800 bg-slate-900/40 overflow-hidden">
+          <img src="https://cdn.wisebarber.com/wisebarber/images/082o254c27bzcgr.jpg?width=1400&quality=60"
+            alt="Corte con diseño" class="h-40 w-full object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Corte con diseño</h3>
+            <p class="mt-2 text-slate-300">Detalles y líneas que destacan.</p>
+            <p class="mt-4 text-[#2563eb] font-semibold">Desde 13.000 ARS</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-4 pb-16">
+      <h2 class="font-title text-4xl mb-8">Ambiente</h2>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <img
+          src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1748&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Sillones de barbería" class="h-56 w-full object-cover rounded-xl">
+        <img
+          src="https://images.unsplash.com/photo-1621645582931-d1d3e6564943?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Herramientas profesionales" class="h-56 w-full object-cover rounded-xl">
+        <img
+          src="https://images.unsplash.com/photo-1496181832051-69dcf27fc27d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fGJhcmJlcnNob3B8ZW58MHx8MHx8fDA%3D"
+          alt="Detalles del local" class="h-56 w-full object-cover rounded-xl">
+      </div>
+      <div class="mt-8">
+        <a href="reservar.html"
+          class="inline-block bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-6 py-3 rounded-md font-semibold">Reserva tu
+          turno</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-800">
+    <div class="mx-auto max-w-6xl px-4 py-8 flex flex-col md:flex-row items-center md:justify-between gap-4">
+      <p class="text-slate-400">Lavalle 1498, Local 35 • Lunes a sábados de 10 a 20 hs</p>
+      <p class="text-slate-400">© Focuz Barbería</p>
+    </div>
+  </footer>
+</body>
+
+</html>

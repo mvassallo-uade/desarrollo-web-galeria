@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Lavalle | Centro Comercial</title>
+    <meta name="description"
+        content="Galería Lavalle - El centro comercial más completo de la ciudad. Descubre nuestros locales, servicios, entretenimiento y gastronomía en el corazón de Buenos Aires.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Galería Lavalle | Centro Comercial">
+    <meta property="og:description"
+        content="El centro comercial más completo de la ciudad. Descubre nuestros locales, servicios, entretenimiento y gastronomía.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?q=80&w=1740&auto=format&fit=crop">
+    <meta property="og:url" content="https://galeria-lavalle.com">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏬</text></svg>">
+</head>
+
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo" aria-label="Galería Lavalle - Inicio">
+                    <span>Galería Lavalle</span>
+                </a>
+
+                <nav role="navigation" aria-label="Navegación principal">
+                    <ul class="nav-list" id="nav-list">
+                        <li><a href="index.html" class="nav-link active" aria-current="page">Inicio</a></li>
+                        <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                        <li><a href="entretenimientos.html" class="nav-link">Entretenimientos</a></li>
+                        <li><a href="locales.html" class="nav-link">Locales</a></li>
+                        <li><a href="ofertas.html" class="nav-link">Ofertas</a></li>
+                        <li><a href="gastronomia.html" class="nav-link">Gastronomía</a></li>
+                        <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    </ul>
+
+                    <button class="mobile-nav-toggle" aria-expanded="false" aria-controls="nav-list"
+                        aria-label="Abrir menú de navegación">
+                        ☰
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-title">Bienvenido a Galería Lavalle</h1>
+                    <p>El centro comercial más completo de Buenos Aires. Descubre una experiencia única de compras,
+                        entretenimiento y gastronomía en el corazón de la ciudad.</p>
+
+                    <div class="btn-group">
+                        <a href="locales.html" class="btn btn-primary">Explorar Locales</a>
+                        <a href="ofertas.html" class="btn btn-secondary">Ver Ofertas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Presentation -->
+        <section class="section" aria-labelledby="video-title">
+            <div class="container">
+                <h2 id="video-title" class="section-title">Conoce Nuestra Galería</h2>
+
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            title="Video presentación Galería Lavalle"
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                            allowfullscreen loading="lazy">
+                        </iframe>
+                    </div>
+                    <p style="text-align: center; margin-top: 1rem; color: var(--text-muted);">
+                        Descubre todo lo que Galería Lavalle tiene para ofrecerte
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Sections -->
+        <section class="section" aria-labelledby="features-title">
+            <div class="container">
+                <h2 id="features-title" class="section-title">¿Qué Encontrarás Aquí?</h2>
+
+                <div class="grid grid-3">
+                    <article class="card">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1740&auto=format&fit=crop"
+                            alt="Variedad de locales comerciales" loading="lazy">
+                        <div class="card-content">
+                            <h3 class="card-title">Locales Comerciales</h3>
+                            <p>Más de 50 locales con las mejores marcas y productos. Desde moda hasta tecnología,
+                                encuentra todo lo que necesitas.</p>
+                            <a href="locales.html" class="btn btn-primary"
+                                aria-label="Explorar todos los locales comerciales">
+                                Explorar Locales
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1740&auto=format&fit=crop"
+                            alt="Espacios de entretenimiento" loading="lazy">
+                        <div class="card-content">
+                            <h3 class="card-title">Entretenimiento</h3>
+                            <p>Cine, juegos, espacios culturales y mucho más. Diversión garantizada para toda la
+                                familia.</p>
+                            <a href="entretenimientos.html" class="btn btn-primary"
+                                aria-label="Ver opciones de entretenimiento">
+                                Ver Entretenimientos
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1740&auto=format&fit=crop"
+                            alt="Opciones gastronómicas" loading="lazy">
+                        <div class="card-content">
+                            <h3 class="card-title">Gastronomía</h3>
+                            <p>Desde comida rápida hasta restaurantes gourmet. Sabores para todos los gustos y
+                                ocasiones.</p>
+                            <a href="gastronomia.html" class="btn btn-primary"
+                                aria-label="Descubrir opciones gastronómicas">
+                                Descubrir Gastronomía
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Stores -->
+        <section class="section" style="background: #f8fafc;" aria-labelledby="stores-title">
+            <div class="container">
+                <h2 id="stores-title" class="section-title">Locales Destacados</h2>
+
+                <div class="grid grid-2">
+                    <article class="card">
+                        <img src="https://plus.unsplash.com/premium_photo-1677444546739-21b8aad351d4?q=80&w=1740&auto=format&fit=crop"
+                            alt="Focuz Barbería - Ambiente moderno" loading="lazy">
+                        <div class="card-content">
+                            <h3 class="card-title">Focuz Barbería</h3>
+                            <p><strong>Rubro:</strong> Barbería</p>
+                            <p><strong>Ubicación:</strong> Local 35, Pasillo A</p>
+                            <p>Cortes modernos y clásicos, afeitados prolijos y productos de alta durabilidad. Tu mejor
+                                estilo, a tu alcance.</p>
+
+                            <div style="margin: 1rem 0;">
+                                <span
+                                    style="background: #10b981; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.875rem;">
+                                    ¡Ofertas disponibles!
+                                </span>
+                            </div>
+
+                            <div class="btn-group">
+                                <a href="./barberia/index.html" class="btn btn-primary"
+                                    aria-label="Visitar sitio web de Focuz Barbería">
+                                    Visitar Sitio
+                                </a>
+                                <a href="locales.html#focuz" class="btn btn-secondary"
+                                    aria-label="Ver Focuz Barbería en el mapa">
+                                    Ver en Mapa
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=1740&auto=format&fit=crop"
+                            alt="CuevaGeeks - Tienda de videojuegos" loading="lazy">
+                        <div class="card-content">
+                            <h3 class="card-title">CuevaGeeks</h3>
+                            <p><strong>Rubro:</strong> Videojuegos</p>
+                            <p><strong>Ubicación:</strong> Local 12, Pasillo B</p>
+                            <p>Tu portal para descubrir lo mejor en videojuegos, consolas y accesorios. Para todo tipo
+                                de jugador.</p>
+
+                            <div class="btn-group">
+                                <a href="./videojuegos/index.html" class="btn btn-primary"
+                                    aria-label="Visitar sitio web de CuevaGeeks">
+                                    Visitar Sitio
+                                </a>
+                                <a href="locales.html#game-store" class="btn btn-secondary"
+                                    aria-label="Ver CuevaGeeks en el mapa">
+                                    Ver en Mapa
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Preview -->
+        <section class="section" aria-labelledby="services-title">
+            <div class="container">
+                <h2 id="services-title" class="section-title">Nuestros Servicios</h2>
+
+                <div class="grid grid-4">
+                    <div style="text-align: center; padding: 2rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🚗</div>
+                        <h3>Estacionamiento</h3>
+                        <p>Amplio estacionamiento gratuito para nuestros visitantes</p>
+                    </div>
+
+                    <div style="text-align: center; padding: 2rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
+                        <h3>Seguridad 24/7</h3>
+                        <p>Personal de seguridad y cámaras para tu tranquilidad</p>
+                    </div>
+
+                    <div style="text-align: center; padding: 2rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">♿</div>
+                        <h3>Accesibilidad</h3>
+                        <p>Instalaciones completamente accesibles para todos</p>
+                    </div>
+
+                    <div style="text-align: center; padding: 2rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">📶</div>
+                        <h3>WiFi Gratuito</h3>
+                        <p>Conexión a internet de alta velocidad en toda la galería</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="servicios.html" class="btn btn-primary">Ver Todos los Servicios</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section" style="background: var(--primary); color: white;" aria-labelledby="cta-title">
+            <div class="container" style="text-align: center;">
+                <h2 id="cta-title">¿Listo para Visitarnos?</h2>
+                <p style="font-size: 1.25rem; margin-bottom: 2rem; color: rgba(255,255,255,0.9);">
+                    Descubre todo lo que Galería Lavalle tiene para ofrecerte. ¡Te esperamos!
+                </p>
+
+                <div class="btn-group">
+                    <a href="locales.html" class="btn btn-secondary">Explorar Locales</a>
+                    <a href="contacto.html" class="btn" style="background: white; color: var(--primary);">Cómo
+                        Llegar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Galería Lavalle</h3>
+                    <p>El centro comercial más completo de Buenos Aires</p>
+                    <p>📍 Lavalle 1498, CABA</p>
+                    <p>📞 +54 11 1234-5678</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Horarios</h3>
+                    <ul>
+                        <li>Lunes a Sábados: 10:00 - 22:00</li>
+                        <li>Domingos: 12:00 - 21:00</li>
+                        <li>Feriados: 14:00 - 20:00</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="locales.html">Locales Comerciales</a></li>
+                        <li><a href="ofertas.html">Ofertas y Promociones</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <ul>
+                        <li><a href="#" aria-label="Facebook de Galería Lavalle">Facebook</a></li>
+                        <li><a href="#" aria-label="Instagram de Galería Lavalle">Instagram</a></li>
+                        <li><a href="#" aria-label="Twitter de Galería Lavalle">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Galería Lavalle. Todos los derechos reservados.</p>
+                <p>
+                    <a href="#sitemap">Mapa del Sitio</a> |
+                    <a href="#privacy">Política de Privacidad</a> |
+                    <a href="#terms">Términos y Condiciones</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile navigation toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileToggle = document.querySelector('.mobile-nav-toggle');
+            const navList = document.querySelector('.nav-list');
+
+            if (mobileToggle && navList) {
+                mobileToggle.addEventListener('click', function () {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    navList.classList.toggle('active');
+
+                    // Update button text for screen readers
+                    this.textContent = isExpanded ? '☰' : '✕';
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function (e) {
+                    if (!mobileToggle.contains(e.target) && !navList.contains(e.target)) {
+                        mobileToggle.setAttribute('aria-expanded', 'false');
+                        navList.classList.remove('active');
+                        mobileToggle.textContent = '☰';
+                    }
+                });
+
+                // Close menu on escape key
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && navList.classList.contains('active')) {
+                        mobileToggle.setAttribute('aria-expanded', 'false');
+                        navList.classList.remove('active');
+                        mobileToggle.textContent = '☰';
+                        mobileToggle.focus();
+                    }
+                });
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation to cards when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>

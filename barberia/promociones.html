@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Focuz Barbería | Promociones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --bg: #0b0f12;
+            --blue-deep: #0f3d63;
+            --blue: #2563eb
+        }
+
+        .font-title {
+            font-family: "Bebas Neue", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif
+        }
+
+        body {
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif
+        }
+    </style>
+</head>
+
+<body class="bg-[#0b0f12] text-slate-50">
+    <header class="sticky top-0 z-50 bg-[#0b0f12]/80 backdrop-blur">
+        <nav class="mx-auto max-w-6xl px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="assets/img/logo-focuz.png" alt="Logo Focuz Barbería" class="h-9 w-auto">
+                    <span class="font-title text-2xl tracking-wide">Focuz Barbería</span>
+                </a>
+                <ul class="hidden md:flex items-center gap-6 text-sm">
+                    <li><a href="index.html" class="hover:text-[#2563eb]">Inicio</a></li>
+                    <li><a href="nosotros.html" class="hover:text-[#2563eb]">Nosotros</a></li>
+                    <li><a href="servicios.html" class="hover:text-[#2563eb]">Productos/Servicios</a></li>
+                    <li><a aria-current="page" href="promociones.html"
+                            class="border-b-2 border-[#2563eb] text-[#2563eb] pb-1">Promociones</a></li>
+                    <li><a href="reservar.html" class="hover:text-[#2563eb]">Reservar</a></li>
+                    <li><a href="contacto.html" class="hover:text-[#2563eb]">Contacto</a></li>
+                </ul>
+                <details class="md:hidden">
+                    <summary class="list-none cursor-pointer px-3 py-2 rounded bg-slate-800/80">Menú</summary>
+                    <ul class="absolute right-4 mt-2 w-48 rounded bg-slate-900/95 p-2 space-y-1">
+                        <li><a href="index.html" class="block px-3 py-2 rounded hover:bg-slate-800">Inicio</a></li>
+                        <li><a href="nosotros.html" class="block px-3 py-2 rounded hover:bg-slate-800">Nosotros</a></li>
+                        <li><a href="servicios.html"
+                                class="block px-3 py-2 rounded hover:bg-slate-800">Productos/Servicios</a></li>
+                        <li><a aria-current="page" href="promociones.html"
+                                class="block px-3 py-2 rounded text-[#2563eb]">Promociones</a></li>
+                        <li><a href="reservar.html" class="block px-3 py-2 rounded hover:bg-slate-800">Reservar</a></li>
+                        <li><a href="contacto.html" class="block px-3 py-2 rounded hover:bg-slate-800">Contacto</a></li>
+                    </ul>
+                </details>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-4 py-16">
+        <h1 class="font-title text-5xl mb-4">Promociones especiales</h1>
+        <p class="text-slate-300 mb-12 max-w-2xl">Aprovechá nuestras ofertas exclusivas y ahorrá en tus servicios
+            favoritos. Calculá tu descuento y descubrí cuánto podés ahorrar.</p>
+
+        <section class="mb-16">
+            <div class="rounded-xl border border-slate-800 bg-slate-900/40 p-8">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="bg-[#2563eb] text-white px-4 py-2 rounded-full font-semibold">OFERTA 1</div>
+                    <h2 class="font-title text-3xl">Llevá 2 productos y obtené 50% en el segundo</h2>
+                </div>
+
+                <p class="text-slate-300 mb-6">Elegí dos productos de nuestra línea de ceras y pagá solo el 50% del
+                    segundo producto (el de menor valor).</p>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Calculá tu ahorro</h3>
+                        <form id="promo1-form" class="space-y-4">
+                            <div>
+                                <label for="promo1-product1" class="block text-sm font-medium mb-2">Primer
+                                    producto</label>
+                                <select id="promo1-product1"
+                                    class="w-full bg-slate-800 border border-slate-700 rounded-md px-3 py-2 text-white">
+                                    <option value="">Seleccionar producto</option>
+                                    <option value="10000">Cera Mate - $10.000</option>
+                                    <option value="12000">Fijación Extrema - $12.000</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="promo1-product2" class="block text-sm font-medium mb-2">Segundo
+                                    producto</label>
+                                <select id="promo1-product2"
+                                    class="w-full bg-slate-800 border border-slate-700 rounded-md px-3 py-2 text-white">
+                                    <option value="">Seleccionar producto</option>
+                                    <option value="10000">Cera Mate - $10.000</option>
+                                    <option value="12000">Fijación Extrema - $12.000</option>
+                                </select>
+                            </div>
+                            <button type="button" onclick="calculatePromo1()"
+                                class="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-6 py-3 rounded-md font-semibold">Calcular
+                                descuento</button>
+                        </form>
+                    </div>
+
+                    <div id="promo1-results" class="bg-slate-800/50 rounded-lg p-6 hidden">
+                        <h4 class="text-lg font-semibold mb-4 text-[#2563eb]">Resumen de tu compra</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>Total sin descuento:</span>
+                                <span id="promo1-original">$0</span>
+                            </div>
+                            <div class="flex justify-between text-green-400">
+                                <span>Descuento aplicado:</span>
+                                <span id="promo1-discount">$0</span>
+                            </div>
+                            <div class="border-t border-slate-700 pt-2 mt-2">
+                                <div class="flex justify-between font-semibold text-lg">
+                                    <span>Total final:</span>
+                                    <span id="promo1-final" class="text-[#2563eb]">$0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <div class="rounded-xl border border-slate-800 bg-slate-900/40 p-8">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="bg-purple-600 text-white px-4 py-2 rounded-full font-semibold">OFERTA 2</div>
+                    <h2 class="font-title text-3xl">3x2 en servicios seleccionados</h2>
+                </div>
+
+                <p class="text-slate-300 mb-6">Vení con 2 amigos y pagá solo 2 servicios. El servicio de menor valor es
+                    gratis.</p>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Calculá tu ahorro</h3>
+                        <form id="promo2-form" class="space-y-4">
+                            <div>
+                                <label for="promo2-service1" class="block text-sm font-medium mb-2">Primer
+                                    servicio</label>
+                                <select id="promo2-service1"
+                                    class="w-full bg-slate-800 border border-slate-700 rounded-md px-3 py-2 text-white">
+                                    <option value="">Seleccionar servicio</option>
+                                    <option value="12700">Corte de pelo - $12.700</option>
+                                    <option value="15700">Corte y barba - $15.700</option>
+                                    <option value="13000">Corte con diseño - $13.000</option>
+                                    <option value="10000">Barba - $10.000</option>
+                                    <option value="7700">Rapado - $7.700</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="promo2-service2" class="block text-sm font-medium mb-2">Segundo
+                                    servicio</label>
+                                <select id="promo2-service2"
+                                    class="w-full bg-slate-800 border border-slate-700 rounded-md px-3 py-2 text-white">
+                                    <option value="">Seleccionar servicio</option>
+                                    <option value="12700">Corte de pelo - $12.700</option>
+                                    <option value="15700">Corte y barba - $15.700</option>
+                                    <option value="13000">Corte con diseño - $13.000</option>
+                                    <option value="10000">Barba - $10.000</option>
+                                    <option value="7700">Rapado - $7.700</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="promo2-service3" class="block text-sm font-medium mb-2">Tercer
+                                    servicio</label>
+                                <select id="promo2-service3"
+                                    class="w-full bg-slate-800 border border-slate-700 rounded-md px-3 py-2 text-white">
+                                    <option value="">Seleccionar servicio</option>
+                                    <option value="12700">Corte de pelo - $12.700</option>
+                                    <option value="15700">Corte y barba - $15.700</option>
+                                    <option value="13000">Corte con diseño - $13.000</option>
+                                    <option value="10000">Barba - $10.000</option>
+                                    <option value="7700">Rapado - $7.700</option>
+                                </select>
+                            </div>
+                            <button type="button" onclick="calculatePromo2()"
+                                class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-md font-semibold">Calcular
+                                descuento</button>
+                        </form>
+                    </div>
+
+                    <div id="promo2-results" class="bg-slate-800/50 rounded-lg p-6 hidden">
+                        <h4 class="text-lg font-semibold mb-4 text-green-400">Resumen de tu compra</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>Total sin descuento:</span>
+                                <span id="promo2-original">$0</span>
+                            </div>
+                            <div class="flex justify-between text-green-400">
+                                <span>Descuento aplicado:</span>
+                                <span id="promo2-discount">$0</span>
+                            </div>
+                            <div class="border-t border-slate-700 pt-2 mt-2">
+                                <div class="flex justify-between font-semibold text-lg">
+                                    <span>Total final:</span>
+                                    <span id="promo2-final" class="text-green-400">$0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <div class="rounded-xl border border-slate-800 bg-slate-900/40 p-8">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="bg-purple-600 text-white px-4 py-2 rounded-full font-semibold">OFERTA 3</div>
+                    <h2 class="font-title text-3xl">10% de descuento por compras superiores a $20.000</h2>
+                </div>
+
+                <p class="text-slate-300 mb-6">Combiná servicios y productos hasta superar los $20.000 y obtené un 10%
+                    de descuento en toda tu compra.</p>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Calculá tu ahorro</h3>
+                        <form id="promo3-form" class="space-y-4">
+                            <div>
+                                <h4 class="font-medium mb-3">Servicios</h4>
+                                <div class="space-y-2">
+                                    <label class="flex items-center gap-3">
+                                        <input type="checkbox" value="12700" class="promo3-item rounded">
+                                        <span>Corte de pelo - $12.700</span>
+                                    </label>
+                                    <label class="flex items-center gap-3">
+                                        <input type="checkbox" value="15700" class="promo3-item rounded">
+                                        <span>Corte y barba - $15.700</span>
+                                    </label>
+                                    <label class="flex items-center gap-3">
+                                        <input type="checkbox" value="13000" class="promo3-item rounded">
+                                        <span>Corte con diseño - $13.000</span>
+                                    </label>
+                                    <label class="flex items-center gap-3">
+                                        <input type="checkbox" value="10000" class="promo3-item rounded">
+                                        <span>Barba - $10.000</span>
+                                    </label>
+                                    <label class="flex items-center gap-3">
+                                        <input type="checkbox" value="7700" class="promo3-item rounded">
+                                        <span>Rapado - $7.700</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-medium mb-3">Productos</h4>
+                                <div class="space-y-2">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" value="10000" data-base-price="10000" class="promo3-item rounded">
+                                        <span>Cera Mate - $10.000</span>
+                                        <input type="number" min="1" max="5" value="1"
+                                            class="w-16 bg-slate-800 border border-slate-700 rounded px-2 py-1 text-sm ml-auto"
+                                            onchange="updateQuantity(this, 10000)">
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" value="12000" data-base-price="12000" class="promo3-item rounded">
+                                        <span>Fijación Extrema - $12.000</span>
+                                        <input type="number" min="1" max="5" value="1"
+                                            class="w-16 bg-slate-800 border border-slate-700 rounded px-2 py-1 text-sm ml-auto"
+                                            onchange="updateQuantity(this, 12000)">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" onclick="calculatePromo3()"
+                                class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-md font-semibold">Calcular
+                                descuento</button>
+                        </form>
+                    </div>
+
+                    <div id="promo3-results" class="bg-slate-800/50 rounded-lg p-6 hidden">
+                        <h4 class="text-lg font-semibold mb-4 text-purple-400">Resumen de tu compra</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>Total sin descuento:</span>
+                                <span id="promo3-original">$0</span>
+                            </div>
+                            <div class="flex justify-between" id="promo3-threshold">
+                                <span class="text-slate-400">Mínimo para descuento:</span>
+                                <span class="text-slate-400">$20.000</span>
+                            </div>
+                            <div class="flex justify-between text-purple-400">
+                                <span>Descuento aplicado:</span>
+                                <span id="promo3-discount">$0</span>
+                            </div>
+                            <div class="border-t border-slate-700 pt-2 mt-2">
+                                <div class="flex justify-between font-semibold text-lg">
+                                    <span>Total final:</span>
+                                    <span id="promo3-final" class="text-purple-400">$0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="promo3-message" class="mt-4 p-3 rounded bg-slate-700/50 text-sm hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center">
+            <a href="reservar.html"
+                class="inline-block bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-4 rounded-md font-semibold text-lg">Reservar
+                turno ahora</a>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-800">
+        <div class="mx-auto max-w-6xl px-4 py-8 flex flex-col md:flex-row items-center md:justify-between gap-4">
+            <p class="text-slate-400">Lavalle 1498, Local 35 • Lunes a sábados de 10 a 20 hs</p>
+            <p class="text-slate-400">© Focuz Barbería</p>
+        </div>
+    </footer>
+
+    <script src="promociones.js"></script>
+</body>
+
+</html>
