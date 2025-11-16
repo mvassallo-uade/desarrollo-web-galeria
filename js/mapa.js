@@ -200,6 +200,17 @@ class GaleriaMap {
     this.resultsAnnouncer.textContent = message;
   }
 
+  // Get initial letter for map pin
+  getLocalInitial(local) {
+    const initials = {
+      'focuz': 'F',
+      'game-store': 'G',
+      'indumentaria': 'S',
+      'apicultura': 'M'
+    };
+    return initials[local.id] || local.nombre.charAt(0).toUpperCase();
+  }
+
   renderMap() {
     if (!this.mapContainer) return;
 
@@ -218,7 +229,7 @@ class GaleriaMap {
                 fill="#1e40af" stroke="white" stroke-width="2"/>
         <text x="${local.x}%" y="${local.y}%" dy="0.35em" 
               text-anchor="middle" fill="white" font-size="10" font-weight="bold">
-          ${local.id === 'focuz' ? 'F' : local.id === 'game-store' ? 'G' : 'S'}
+          ${this.getLocalInitial(local)}
         </text>
       </g>`
     ).join('');
@@ -230,16 +241,20 @@ class GaleriaMap {
         <rect width="100" height="100" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
         
         <!-- Pasillo A -->
-        <rect x="10" y="20" width="35" height="60" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
-        <text x="27.5" y="15" text-anchor="middle" font-size="8" fill="#64748b">Pasillo A</text>
+        <rect x="10" y="20" width="25" height="60" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+        <text x="22.5" y="15" text-anchor="middle" font-size="8" fill="#64748b">Pasillo A</text>
         
         <!-- Pasillo B -->
-        <rect x="55" y="20" width="35" height="60" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
-        <text x="72.5" y="15" text-anchor="middle" font-size="8" fill="#64748b">Pasillo B</text>
+        <rect x="65" y="20" width="25" height="60" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+        <text x="77.5" y="15" text-anchor="middle" font-size="8" fill="#64748b">Pasillo B</text>
+        
+        <!-- Pasillo C (nuevo) -->
+        <rect x="40" y="40" width="20" height="40" fill="#dfe9f3" stroke="#94a3b8" stroke-width="1"/>
+        <text x="50" y="37" text-anchor="middle" font-size="7" fill="#64748b">Pasillo C</text>
         
         <!-- Central area -->
-        <rect x="45" y="30" width="10" height="40" fill="#ddd6fe" stroke="#a78bfa" stroke-width="1"/>
-        <text x="50" y="27" text-anchor="middle" font-size="6" fill="#7c3aed">Centro</text>
+        <rect x="35" y="20" width="30" height="15" fill="#ddd6fe" stroke="#a78bfa" stroke-width="1"/>
+        <text x="50" y="29" text-anchor="middle" font-size="6" fill="#7c3aed">Área Central</text>
         
         <!-- Entrance -->
         <rect x="45" y="85" width="10" height="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
