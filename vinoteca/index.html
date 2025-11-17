@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vinoteca Norte - Inicio</title>
+<link rel="icon" type="image/x-icon" href="img/logo.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="img/logo.jpg" alt="Vinoteca Norte logo" width="60" height="60" />
+      <span>Vinoteca Norte</span>
+    </a>
+    <nav class="menu">
+        <a href="index.html" class="active">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+        <a href="catalogo.html">Catálogo</a>
+      <a href="promociones.html">Promociones</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Los mejores vinos de la región</h1>
+        <p>Explora la gran variedad de vinos y espumantes de nuestro catálogo</p>
+        <a class="btn" href="catalogo.html">Ver catálogo</a>
+      </div>
+      <div class="hero-media" style="background:url('img/vino-inicio.jpg') center/cover no-repeat" role="img" aria-label="Cava con botellas y copas de vino"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>Vinoteca Norte</h4>
+      <p>Selección curada de etiquetas argentinas y de autor. Catas y maridajes.</p>
+    </div>
+    <div>
+      <h4>Horario</h4>
+      <ul class="list-plain">
+        <li>Lunes a Sábados: 11–21 h</li>
+        <li>Domingos: 17–21 h</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul class="list-plain">
+        <li>📍 Lavalle 1498, Buenos Aires</li>
+        <li>📞 +54 11-1234-5678</li>
+        <li>✉️ consultas@vinotecanorte.com.ar</li>
+        <li>IG: @vinoteca.norte</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-legal">© <span id="year"></span> Vinoteca Norte — Todos los derechos reservados</div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

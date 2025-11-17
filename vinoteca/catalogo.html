@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Catálogo - Vinoteca Norte</title>
+<link rel="icon" type="image/x-icon" href="img/logo.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="img/logo.jpg" alt="Vinoteca Norte logo" width="60" height="60" />
+      <span>Vinoteca Norte</span>
+    </a>
+    <nav class="menu">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="catalogo.html" class="active">Catálogo</a>
+      <a href="promociones.html">Promociones</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="page-header">
+    <h1>Nuestro Catálogo</h1>
+    <p>Descubre nuestra selección curada de vinos y espumantes de las mejores bodegas argentinas</p>
+  </section>
+
+  <section class="products-grid">
+    <article class="product-card">
+      <div class="product-image">
+        <img src="img/cplmmw-malbec.jpg" alt="CPLMMW Malbec" />
+      </div>
+      <div class="product-info">
+        <h3>CPLMMW Malbec</h3>
+        <p class="product-description">Malbec de alta gama con notas de frutos rojos y especias</p>
+        <div class="product-price">$8.500</div>
+        <button class="btn btn-primary">Consultar</button>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-image">
+        <img src="img/elenemigo-malbec.jpg" alt="El Enemigo Malbec" />
+      </div>
+      <div class="product-info">
+        <h3>El Enemigo Malbec</h3>
+        <p class="product-description">Malbec elegante con estructura y complejidad</p>
+        <div class="product-price">$12.000</div>
+        <button class="btn btn-primary">Consultar</button>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-image">
+        <img src="img/elenemigo-cabfran.png" alt="El Enemigo Cabernet Franc" />
+      </div>
+      <div class="product-info">
+        <h3>El Enemigo Cabernet Franc</h3>
+        <p class="product-description">Cabernet Franc con carácter y elegancia</p>
+        <div class="product-price">$15.000</div>
+        <button class="btn btn-primary">Consultar</button>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-image">
+        <img src="img/mmw-blend.jpg" alt="MMW Blend" />
+      </div>
+      <div class="product-info">
+        <h3>MMW Blend</h3>
+        <p class="product-description">Corte especial con Malbec, Merlot y Cabernet Sauvignon</p>
+        <div class="product-price">$9.500</div>
+        <button class="btn btn-primary">Consultar</button>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-image">
+        <img src="img/sppmmw-blend.jpg" alt="SPPMMW Blend" />
+      </div>
+      <div class="product-info">
+        <h3>SPPMMW Blend</h3>
+        <p class="product-description">Blend premium con crianza en roble francés</p>
+        <div class="product-price">$18.000</div>
+        <button class="btn btn-primary">Consultar</button>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-image">
+        <img src="img/bodega.jpg" alt="Selección Especial" />
+      </div>
+      <div class="product-info">
+        <h3>Selección Especial</h3>
+        <p class="product-description">Colección limitada de vinos de autor</p>
+        <div class="product-price">Consultar</div>
+        <button class="btn btn-primary">Consultar</button>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>Vinoteca Norte</h4>
+      <p>Selección curada de etiquetas argentinas y de autor. Catas y maridajes.</p>
+    </div>
+    <div>
+      <h4>Horario</h4>
+      <ul class="list-plain">
+        <li>Lunes a Sábados: 11–21 h</li>
+        <li>Domingos: 17–21 h</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul class="list-plain">
+        <li>📍 Lavalle 1498, Buenos Aires</li>
+        <li>📞 +54 11-1234-5678</li>
+        <li>✉️ consultas@vinotecanorte.com.ar</li>
+        <li>IG: @vinoteca.norte</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-legal">© <span id="year"></span> Vinoteca Norte — Todos los derechos reservados</div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contacto - Vinoteca Norte</title>
+<link rel="icon" type="image/x-icon" href="img/logo.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="img/logo.jpg" alt="Vinoteca Norte logo" width="60" height="60" />
+      <span>Vinoteca Norte</span>
+    </a>
+    <nav class="menu">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="promociones.html">Promociones</a>
+        <a href="contacto.html" class="active">Contacto</a>
+    </nav>
+  </div>
+</header>
+<main class="container stack">
+  <h1>Contacto y pedidos</h1>
+  <div class="contact-grid">
+    <div>
+      <h2>Visitános</h2>
+      <p><strong>Dirección:</strong> Lavalle 1498, Buenos Aires</p>
+      <p><strong>Teléfono:</strong> +54 11-1234-5678</p>
+      <p><strong>Email:</strong> consultas@vinotecanorte.com.ar</p>
+      <p><strong>Instagram:</strong> @vinoteca.norte</p>
+      <iframe 
+        class="map" 
+        title="Mapa de la vinoteca" 
+        loading="lazy" 
+        width="400" 
+        height="300" 
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-58.389722243472915%2C-34.60405352301985%2C-58.385722243472915%2C-34.60205352301985&amp;layer=mapnik&amp;marker=-34.60305352301985%2C-58.387722243472915"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <label>Nombre
+        <input type="text" placeholder="Tu nombre" required>
+      </label>
+      <label>Email
+        <input type="email" placeholder="tunombre@mail.com" required>
+      </label>
+      <label>Mensaje
+        <textarea rows="5" placeholder="¿Qué vino estás buscando?" required></textarea>
+      </label>
+      <button class="btn" type="submit">Enviar</button>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>Vinoteca Norte</h4>
+      <p>Selección curada de etiquetas argentinas y de autor. Catas y maridajes.</p>
+    </div>
+    <div>
+      <h4>Horario</h4>
+      <ul class="list-plain">
+        <li>Lunes a Sábados: 11–21 h</li>
+        <li>Domingos: 17–21 h</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+        <ul class="list-plain">
+          <li>📍 Lavalle 1498, Buenos Aires</li>
+          <li>📞 +54 11-1234-5678</li>
+          <li>✉️ consultas@vinotecanorte.com.ar</li>
+          <li>IG: @vinoteca.norte</li>
+        </ul>
+    </div>
+  </div>
+  <div class="footer-legal">© <span id="year"></span> Vinoteca Norte — Todos los derechos reservados</div>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

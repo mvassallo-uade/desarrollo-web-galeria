@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Promociones - Vinoteca Norte</title>
+<link rel="icon" type="image/x-icon" href="img/logo.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="img/logo.jpg" alt="Vinoteca Norte logo" width="60" height="60" />
+      <span>Vinoteca Norte</span>
+    </a>
+    <nav class="menu">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="promociones.html" class="active">Promociones</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="page-header">
+    <h1>Promociones Especiales</h1>
+    <p>¡Aprovechá nuestras ofertas exclusivas y ahorrá en tus compras!</p>
+  </section>
+
+  <section class="promociones-container">
+    <article class="promo-card card">
+      <div class="promo-header">
+        <h2>🎉 Promoción 2x1 Especial</h2>
+        <p class="promo-description">Llevá 2 productos y obtené 50% de descuento en el segundo. El descuento se aplica automáticamente sobre el producto de menor precio.</p>
+      </div>
+      
+      <form class="promo-form" id="promo1-form">
+        <div class="form-group">
+          <label for="promo1-producto1">Primer Producto</label>
+          <select id="promo1-producto1" name="producto1" required>
+            <option value="">Seleccioná un producto</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="promo1-producto2">Segundo Producto</label>
+          <select id="promo1-producto2" name="producto2" required>
+            <option value="">Seleccioná un producto</option>
+          </select>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Calcular Ahorro</button>
+      </form>
+      
+      <div class="resultado" id="promo1-resultado" style="display: none;">
+        <div class="resultado-detalle">
+          <p><strong>Total sin descuento:</strong> $<span id="promo1-sin-descuento">0</span></p>
+          <p><strong>Descuento aplicado (50%):</strong> -$<span id="promo1-descuento">0</span></p>
+          <p class="resultado-total"><strong>Total a pagar:</strong> $<span id="promo1-total">0</span></p>
+          <p class="resultado-ahorro">💰 <strong>Ahorrás $<span id="promo1-ahorro">0</span>!</strong></p>
+        </div>
+      </div>
+    </article>
+
+    <article class="promo-card card">
+      <div class="promo-header">
+        <h2>🍷 Promoción 3x2</h2>
+        <p class="promo-description">Llevá 3 productos y pagá solo 2. El producto de menor precio es gratis. Ideal para renovar toda tu cava.</p>
+      </div>
+      
+      <form class="promo-form" id="promo2-form">
+        <div class="form-group">
+          <label for="promo2-producto1">Producto 1</label>
+          <select id="promo2-producto1" name="producto1" required>
+            <option value="">Seleccioná un producto</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="promo2-producto2">Producto 2</label>
+          <select id="promo2-producto2" name="producto2" required>
+            <option value="">Seleccioná un producto</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="promo2-producto3">Producto 3</label>
+          <select id="promo2-producto3" name="producto3" required>
+            <option value="">Seleccioná un producto</option>
+          </select>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Calcular Ahorro</button>
+      </form>
+      
+      <div class="resultado" id="promo2-resultado" style="display: none;">
+        <div class="resultado-detalle">
+          <p><strong>Total sin descuento:</strong> $<span id="promo2-sin-descuento">0</span></p>
+          <p><strong>Descuento aplicado (producto gratis):</strong> -$<span id="promo2-descuento">0</span></p>
+          <p class="resultado-total"><strong>Total a pagar:</strong> $<span id="promo2-total">0</span></p>
+          <p class="resultado-ahorro">💰 <strong>¡Ahorrás $<span id="promo2-ahorro">0</span>!</strong></p>
+        </div>
+      </div>
+    </article>
+
+    <article class="promo-card card">
+      <div class="promo-header">
+        <h2>✨ Descuento por Compra Mayor</h2>
+        <p class="promo-description">10% de descuento en compras superiores a $30.000. Agregá todos los productos que quieras. Si superás los $30.000, obtenés el descuento automáticamente.</p>
+      </div>
+      
+      <form class="promo-form" id="promo3-form">
+        <div id="promo3-productos-container">
+          <div class="producto-row">
+            <div class="form-group">
+              <label>Producto</label>
+              <select class="promo3-producto" name="producto" required>
+                <option value="">Seleccioná un producto</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Cantidad</label>
+              <input type="number" class="promo3-cantidad" name="cantidad" min="1" value="1" required>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-secondary" id="promo3-agregar-producto">+ Agregar otro producto</button>
+        <button type="submit" class="btn btn-primary">Calcular Ahorro</button>
+      </form>
+      
+      <div class="resultado" id="promo3-resultado" style="display: none;">
+        <div class="resultado-detalle">
+          <p><strong>Total sin descuento:</strong> $<span id="promo3-sin-descuento">0</span></p>
+          <p id="promo3-mensaje-minimo" style="display: none;" class="promo-mensaje">⚠️ El monto mínimo para esta promoción es $30.000</p>
+          <p id="promo3-descuento-info" style="display: none;"><strong>Descuento aplicado (10%):</strong> -$<span id="promo3-descuento">0</span></p>
+          <p class="resultado-total"><strong>Total a pagar:</strong> $<span id="promo3-total-final">0</span></p>
+          <p class="resultado-ahorro" id="promo3-ahorro-text" style="display: none;">💰 <strong>¡Ahorrás $<span id="promo3-ahorro">0</span>!</strong></p>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>Vinoteca Norte</h4>
+      <p>Selección curada de etiquetas argentinas y de autor. Catas y maridajes.</p>
+    </div>
+    <div>
+      <h4>Horario</h4>
+      <ul class="list-plain">
+        <li>Lunes a Sábados: 11–21 h</li>
+        <li>Domingos: 17–21 h</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul class="list-plain">
+        <li>📍 Lavalle 1498, Buenos Aires</li>
+        <li>📞 +54 11-1234-5678</li>
+        <li>✉️ consultas@vinotecanorte.com.ar</li>
+        <li>IG: @vinoteca.norte</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-legal">© <span id="year"></span> Vinoteca Norte — Todos los derechos reservados</div>
+</footer>
+
+<script src="js/promociones.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+
