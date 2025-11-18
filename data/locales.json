@@ -62,5 +62,22 @@
     "horarios": "Luneas a sábados de 10 a 19 hs",
     "telefono": "+54 11 2270-9988",
     "imagen": "https://images.unsplash.com/photo-1571987530791-58e3e7744d99?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": "vinoteca",
+    "nombre": "Vinoteca Norte",
+    "rubro": "Vinoteca",
+    "ubicacion": "Lavalle 1498, Local 28",
+    "pasillo": "A",
+    "x": 50,
+    "y": 45,
+    "url": "./vinoteca/index.html",
+    "ofertas": true,
+    "accesibilidad": ["rampa", "pago sin contacto"],
+    "descripcion": "Selección curada de etiquetas argentinas y de autor. Catas y maridajes.",
+    "horarios": "Lunes a sábados de 11 a 21 hs, Domingos de 17 a 21 hs",
+    "telefono": "+54 11 1234-5678",
+    "imagen": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
+  
 ]
