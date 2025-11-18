@@ -276,3 +276,54 @@ body[data-page="promos"] .breadcrumb a[href$="promociones.html"]{
   .portada h1{font-size:2.2rem}
   .portada p{font-size:1rem}
 }
+
+#menu-toggle{
+  display:none;
+}
+
+/* Icono ☰ */
+.menu-icon{
+  display:none;
+  font-size:1.8rem;
+  color:var(--text-light);
+  cursor:pointer;
+}
+
+/* Ajustes para mobile */
+@media (max-width:600px){
+
+  header{
+    grid-template-columns:auto auto;
+    grid-template-rows:auto auto;
+    row-gap:8px;
+  }
+
+  header .logo{
+    grid-column:1;
+    justify-self:start;
+  }
+
+  /* Mostramos el icono de menú */
+  header .menu-icon{
+    display:block;
+    grid-column:2;
+    justify-self:end;
+  }
+
+  /* El breadcrumb pasa a ocupar toda la fila y se oculta por defecto */
+  nav.breadcrumb{
+    grid-column:1 / -1;
+    width:100%;
+    display:none;
+  }
+
+  .breadcrumb ul{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  /* Cuando el checkbox está marcado, mostramos el menú */
+  #menu-toggle:checked ~ nav.breadcrumb{
+    display:flex;
+  }
+}

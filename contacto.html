@@ -446,37 +446,82 @@
       messagesContainer.scrollTop = messagesContainer.scrollHeight;
     }
 
-    function getBotResponse(message) {
-      const lowerMessage = message.toLowerCase();
-      
-      if (lowerMessage.includes('horario')) {
-        return 'Nuestros horarios son: Lunes a Sábados de 10:00 a 22:00, Domingos de 12:00 a 21:00.';
-      } else if (lowerMessage.includes('ubicacion') || lowerMessage.includes('donde')) {
-        return 'Estamos en Lavalle 1498, CABA, entre Paraná y Uruguay. Cerca del subte línea B, estación Uruguay.';
-      } else if (lowerMessage.includes('local') || lowerMessage.includes('tienda')) {
-        return 'Tenemos más de 50 locales incluyendo Focuz Barbería, CuevaGeeks y muchos más. ¿Te interesa algún rubro en particular?';
-      } else if (lowerMessage.includes('estacionamiento')) {
-        return 'Sí, tenemos estacionamiento gratuito las primeras 3 horas. Después aplicamos tarifas preferenciales.';
-      } else if (lowerMessage.includes('wifi')) {
-        return 'Tenemos WiFi gratuito en toda la galería. La red es "GaleriaLavalle_Free" sin contraseña.';
-      } else if( lowerMessage.includes('accesible')) {
-        return 'Sí, nuestra galería es accesible para personas con discapacidad, con rampas, ascensores y baños adaptados.';
-      } else if (lowerMessage.includes('gracias') || lowerMessage.includes('thank you')) {
-        return '¡De nada! Si tienes más preguntas, no dudes en preguntar.';
-      } else if (lowerMessage.includes('hola') || lowerMessage.includes('buenas')) {
-        return '¡Hola! ¿En qué puedo ayudarte hoy?';
-      } else if (lowerMessage.includes('oferta') || lowerMessage.includes('promoción')) {
-        return 'Actualmente tenemos varias ofertas en locales seleccionados. Visita nuestra sección de ofertas para más detalles.';
-      }else if (lowerMessage.includes('evento')) {
-        return 'Para organizar un evento, por favor contáctanos al email eventos@galerialavalle.com';
-      } else if (lowerMessage.includes('queja') || lowerMessage.includes('reclamo')) {
-        return 'Lamentamos cualquier inconveniente. Por favor envíanos los detalles de tu queja a quejas@galerialavalle.com';
-      } else if (lowerMessage.includes('ayuda')) {
-        return 'Claro, estoy aquí para ayudarte. ¿Qué necesitas saber?';
-      } else {
-        return 'Gracias por tu consulta. Para información más específica, puedes contactarnos al +54 11 1234-5678 o visitar nuestro centro de atención.';
-      }
+function getBotResponse(message) {
+  const lowerMessage = message.toLowerCase();
+
+  const rules = [
+    {
+      keywords: ['horario', 'horarios'],
+      response: '⏰ Nuestros horarios son:<br>Lunes a Sábados: 10:00 - 22:00<br>Domingos: 12:00 - 21:00<br>Feriados: 14:00 - 20:00.'
+    },
+    {
+      keywords: ['ubicacion', 'ubicación', 'donde', 'dónde'],
+      response: '📍 Estamos en Lavalle 1498, CABA, entre Paraná y Uruguay. Cerca del subte línea B, estación Uruguay.'
+    },
+    {
+      keywords: ['local', 'locales', 'tienda', 'negocio'],
+      response: '🏬 Tenemos más de 50 locales, incluyendo Focuz Barbería, CuevaGeeks y otros rubros de servicios, entretenimiento y gastronomía.'
+    },
+    {
+      keywords: ['estacionamiento', 'parking'],
+      response: '🚗 El estacionamiento es gratuito las primeras 3 horas. Después aplicamos tarifas preferenciales para clientes de la galería.'
+    },
+    {
+      keywords: ['wifi', 'wi-fi'],
+      response: '📶 Contamos con WiFi gratuito en toda la galería. La red es "GaleriaLavalle_Free" y no requiere contraseña.'
+    },
+    {
+      keywords: ['accesible','accesibilidad', 'discapacidad', 'rampa', 'silla de ruedas'],
+      response: '♿ La galería es accesible: tenemos rampas, ascensores con braille y audio, baños adaptados y lugares reservados en el estacionamiento.'
+    },
+    {
+      keywords: ['oferta', 'ofertas', 'promoción', 'promociones'],
+      response: '🎁 Tenemos ofertas en distintos locales. Podés ver el detalle en la sección "Ofertas" del sitio.'
+    },
+    {
+      keywords: ['evento', 'eventos'],
+      response: '🎉 Para organizar un evento, escribinos a <strong>eventos@galeria-lavalle.com</strong>.'
+    },
+    {
+      keywords: ['queja', 'reclamo'],
+      response: '⚠️ Lamentamos cualquier inconveniente. Podés escribirnos a <strong>quejas@galeria-lavalle.com</strong> con el detalle de lo ocurrido.'
+    },
+    {
+      keywords: ['hola', 'buenas', 'buen día', 'buenas tardes', 'buenas noches'],
+      response: '👋 ¡Hola! ¿En qué puedo ayudarte hoy?'
+    },
+    {
+      keywords: ['ayuda', 'ayudame', 'necesito ayuda'],
+      response: '❓ Estoy para ayudarte. Podés preguntarme por horarios, ubicación, locales, estacionamiento, WiFi, accesibilidad u ofertas.'
     }
+  ];
+
+  const respuestas = [];
+
+  for (const rule of rules) {
+    const match = rule.keywords.some(keyword => lowerMessage.includes(keyword));
+    if (match) {
+      respuestas.push(rule.response);
+    }
+  }
+
+  if (respuestas.length > 0) {
+    return respuestas.join('<br><br>');
+  }
+
+  return (
+    'Por ahora puedo ayudarte con información sobre:<br>' +
+    '• Horarios<br>' +
+    '• Ubicación<br>' +
+    '• Locales<br>' +
+    '• Estacionamiento<br>' +
+    '• WiFi<br>' +
+    '• Accesibilidad<br>' +
+    '• Ofertas y eventos<br><br>' +
+    'Intentá preguntarme algo sobre esos temas 😉<br><br>' +
+    'Gracias por tu consulta. Para información más específica, puedes contactarnos al +54 11 1234-5678 o visitar nuestro centro de atención.'
+  );
+}
 
     // Enter key for chat
     document.getElementById('chat-input').addEventListener('keypress', function(e) {
