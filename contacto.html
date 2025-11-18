@@ -52,7 +52,6 @@
       </div>
     </section>
 
-    <!-- Contact Information -->
     <section class="section">
       <div class="container">
         <div class="grid grid-2">
@@ -100,7 +99,6 @@
       </div>
     </section>
 
-    <!-- Contact Form -->
     <section class="section" style="background: #f8fafc;">
       <div class="container">
         <h2 class="section-title">Envíanos un Mensaje</h2>
@@ -154,7 +152,6 @@
       </div>
     </section>
 
-    <!-- Chatbot/FAQ -->
     <section class="section">
       <div class="container">
         <h2 class="section-title">Asistente Virtual</h2>
@@ -184,7 +181,6 @@
       </div>
     </section>
 
-    <!-- FAQ -->
    <section class="section" style="background: #f6f9fb;">
       <div class="container">
         <h2 class="section-title">Preguntas Frecuentes</h2>
@@ -305,7 +301,6 @@
   </footer>
 
   <script>
-    // Mobile navigation
     document.addEventListener('DOMContentLoaded', function() {
       const mobileToggle = document.querySelector('.mobile-nav-toggle');
       const navList = document.querySelector('.nav-list');
@@ -318,8 +313,7 @@
           this.textContent = isExpanded ? '☰' : '✕';
         });
       }
-
-      // FAQ functionality
+      
       document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', function() {
           const isExpanded = this.getAttribute('aria-expanded') === 'true';
@@ -331,8 +325,7 @@
           icon.textContent = isExpanded ? '+' : '−';
         });
       });
-
-      // Contact form validation
+      
       const form = document.getElementById('contact-form');
       form.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -344,7 +337,6 @@
         
         let isValid = true;
         
-        // Validate name
         if (!name.value.trim()) {
           showError('name', 'El nombre es requerido');
           isValid = false;
@@ -352,7 +344,6 @@
           clearError('name');
         }
         
-        // Validate email
         if (!email.value.trim()) {
           showError('email', 'El email es requerido');
           isValid = false;
@@ -363,7 +354,6 @@
           clearError('email');
         }
         
-        // Validate subject
         if (!subject.value) {
           showError('subject', 'Selecciona un asunto');
           isValid = false;
@@ -371,7 +361,6 @@
           clearError('subject');
         }
         
-        // Validate message
         if (!message.value.trim()) {
           showError('message', 'El mensaje es requerido');
           isValid = false;
@@ -405,7 +394,6 @@
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
-    // Chatbot functionality
     function sendMessage() {
       const input = document.getElementById('chat-input');
       const message = input.value.trim();
@@ -523,7 +511,6 @@ function getBotResponse(message) {
   );
 }
 
-    // Enter key for chat
     document.getElementById('chat-input').addEventListener('keypress', function(e) {
       if (e.key === 'Enter') {
         sendMessage();
