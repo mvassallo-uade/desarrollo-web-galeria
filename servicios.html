@@ -6,21 +6,16 @@
   <title>Servicios | Galería Lavalle</title>
   <meta name="description" content="Descubre todos los servicios que ofrece Galería Lavalle: estacionamiento gratuito, seguridad 24/7, WiFi, accesibilidad y mucho más.">
   
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Styles -->
   <link rel="stylesheet" href="css/main.css">
   
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏬</text></svg>">
 </head>
 
 <body>
-  <!-- Skip Link -->
   <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-  <!-- Header -->
   <header class="header" role="banner">
     <div class="container">
       <div class="header-content">
@@ -48,9 +43,7 @@
     </div>
   </header>
 
-  <!-- Main Content -->
   <main id="main-content">
-    <!-- Page Header -->
     <section class="hero" style="min-height: 40vh;">
       <div class="container">
         <div class="hero-content">
@@ -60,7 +53,6 @@
       </div>
     </section>
 
-    <!-- Main Services -->
     <section class="section" aria-labelledby="main-services-title">
       <div class="container">
         <h2 id="main-services-title" class="section-title">Servicios Principales</h2>
@@ -119,7 +111,6 @@
       </div>
     </section>
 
-    <!-- Accessibility Services -->
     <section class="section" style="background: #f8fafc;" aria-labelledby="accessibility-title">
       <div class="container">
         <h2 id="accessibility-title" class="section-title">Accesibilidad Universal</h2>
@@ -170,7 +161,6 @@
       </div>
     </section>
 
-    <!-- Technology Services -->
     <section class="section" aria-labelledby="tech-services-title">
       <div class="container">
         <h2 id="tech-services-title" class="section-title">Servicios Tecnológicos</h2>
@@ -227,7 +217,6 @@
       </div>
     </section>
 
-    <!-- Additional Services -->
     <section class="section" style="background: #f8fafc;" aria-labelledby="additional-services-title">
       <div class="container">
         <h2 id="additional-services-title" class="section-title">Servicios Adicionales</h2>
@@ -300,7 +289,6 @@
       </div>
     </section>
 
-    <!-- Customer Service -->
     <section class="section" aria-labelledby="customer-service-title">
       <div class="container">
         <h2 id="customer-service-title" class="section-title">Atención al Cliente</h2>
@@ -360,7 +348,6 @@
       </div>
     </section>
 
-    <!-- Call to Action -->
     <section class="section" style="background: var(--primary); color: white;">
       <div class="container" style="text-align: center;">
         <h2>¿Necesitas Más Información?</h2>
@@ -376,7 +363,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-content">
@@ -427,9 +413,7 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script>
-    // Mobile navigation toggle
     document.addEventListener('DOMContentLoaded', function() {
       const mobileToggle = document.querySelector('.mobile-nav-toggle');
       const navList = document.querySelector('.nav-list');
@@ -442,7 +426,6 @@
           this.textContent = isExpanded ? '☰' : '✕';
         });
         
-        // Close menu when clicking outside
         document.addEventListener('click', function(e) {
           if (!mobileToggle.contains(e.target) && !navList.contains(e.target)) {
             mobileToggle.setAttribute('aria-expanded', 'false');
@@ -451,7 +434,6 @@
           }
         });
         
-        // Close menu on escape key
         document.addEventListener('keydown', function(e) {
           if (e.key === 'Escape' && navList.classList.contains('active')) {
             mobileToggle.setAttribute('aria-expanded', 'false');
@@ -463,7 +445,6 @@
       }
     });
 
-    // Add fade-in animation to cards when they come into view
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
