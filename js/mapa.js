@@ -1,4 +1,3 @@
-// Galería Lavalle - Interactive Map and Search
 class GaleriaMap {
   constructor() {
     this.locales = [];
@@ -46,7 +45,6 @@ class GaleriaMap {
     this.localesContainer = document.getElementById('locales-list');
     this.resultsAnnouncer = document.getElementById('search-results-announcer');
     
-    // Create results announcer if it doesn't exist
     if (!this.resultsAnnouncer) {
       this.resultsAnnouncer = document.createElement('div');
       this.resultsAnnouncer.id = 'search-results-announcer';
@@ -63,13 +61,11 @@ class GaleriaMap {
       this.searchInput.addEventListener('keydown', this.handleSearchKeydown.bind(this));
     }
 
-    // Reset search button
     const resetButton = document.getElementById('reset-search');
     if (resetButton) {
       resetButton.addEventListener('click', this.resetSearch.bind(this));
     }
 
-    // Filter buttons
     const filterButtons = document.querySelectorAll('[data-filter]');
     filterButtons.forEach(button => {
       button.addEventListener('click', this.handleFilter.bind(this));
@@ -77,11 +73,9 @@ class GaleriaMap {
   }
 
   setupAccessibility() {
-    // Add ARIA labels and descriptions
     if (this.searchInput) {
       this.searchInput.setAttribute('aria-describedby', 'search-help');
       
-      // Create search help text if it doesn't exist
       if (!document.getElementById('search-help')) {
         const helpText = document.createElement('div');
         helpText.id = 'search-help';
@@ -91,7 +85,6 @@ class GaleriaMap {
       }
     }
 
-    // Add keyboard navigation for map pins
     this.setupMapKeyboardNavigation();
   }
 
@@ -105,7 +98,6 @@ class GaleriaMap {
           e.preventDefault();
           this.selectLocal(pin.dataset.localId);
         }
-        // Arrow key navigation
         if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
           e.preventDefault();
           const nextPin = mapPins[index + 1] || mapPins[0];
@@ -134,7 +126,6 @@ class GaleriaMap {
   handleFilter(event) {
     const filter = event.target.dataset.filter;
     
-    // Update active filter button
     document.querySelectorAll('[data-filter]').forEach(btn => {
       btn.classList.remove('active');
     });
@@ -174,7 +165,6 @@ class GaleriaMap {
       this.searchInput.value = '';
     }
     
-    // Reset filter buttons
     document.querySelectorAll('[data-filter]').forEach(btn => {
       btn.classList.remove('active');
     });
@@ -200,7 +190,6 @@ class GaleriaMap {
     this.resultsAnnouncer.textContent = message;
   }
 
-  // Get initial letter for map pin
   getLocalInitial(local) {
     const initials = {
       'focuz': 'F',
@@ -218,7 +207,6 @@ class GaleriaMap {
     const mapSVG = this.createMapSVG();
     this.mapContainer.innerHTML = mapSVG;
     
-    // Add event listeners to pins
     this.setupMapPinListeners();
   }
 
@@ -294,16 +282,13 @@ class GaleriaMap {
       this.showLocalDetails(local);
       this.scrollToLocal(localId);
       
-      // Announce selection for screen readers
       this.resultsAnnouncer.textContent = `Seleccionado: ${local.nombre}, ${local.rubro}`;
     }
   }
 
   highlightLocal(localId) {
-    // Remove previous highlights
     this.removeHighlight();
     
-    // Highlight map pin
     const pin = document.querySelector(`[data-local-id="${localId}"]`);
     if (pin) {
       pin.classList.add('highlighted');
@@ -314,7 +299,6 @@ class GaleriaMap {
       }
     }
 
-    // Highlight card
     const card = document.querySelector(`[data-local-card="${localId}"]`);
     if (card) {
       card.classList.add('highlighted');
@@ -322,7 +306,6 @@ class GaleriaMap {
   }
 
   removeHighlight() {
-    // Remove map pin highlights
     document.querySelectorAll('.map-pin.highlighted').forEach(pin => {
       pin.classList.remove('highlighted');
       const circle = pin.querySelector('circle');
@@ -332,14 +315,12 @@ class GaleriaMap {
       }
     });
 
-    // Remove card highlights
     document.querySelectorAll('.card.highlighted').forEach(card => {
       card.classList.remove('highlighted');
     });
   }
 
   updateMapSelection() {
-    // Reset all pins
     document.querySelectorAll('.map-pin').forEach(pin => {
       pin.classList.remove('selected');
       const circle = pin.querySelector('circle');
@@ -349,7 +330,6 @@ class GaleriaMap {
       }
     });
 
-    // Highlight selected pin
     if (this.selectedLocal) {
       const selectedPin = document.querySelector(`[data-local-id="${this.selectedLocal}"]`);
       if (selectedPin) {
@@ -433,7 +413,6 @@ class GaleriaMap {
 
     this.localesContainer.innerHTML = localesHTML;
     
-    // Add hover listeners to cards
     this.setupCardListeners();
   }
 
@@ -453,7 +432,6 @@ class GaleriaMap {
   }
 
   showLocalDetails(local) {
-    // This could open a modal or update a details panel
     console.log('Showing details for:', local);
   }
 
@@ -477,7 +455,6 @@ class GaleriaMap {
     }
   }
 
-  // Utility function for debouncing search input
   debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -491,15 +468,12 @@ class GaleriaMap {
   }
 }
 
-// Initialize the map when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  // Only initialize if we're on the locales page
   if (document.getElementById('map-container')) {
     window.galeriaMap = new GaleriaMap();
   }
 });
 
-// Export for use in other scripts
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = GaleriaMap;
 }
