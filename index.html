@@ -8,7 +8,6 @@
     <meta name="description"
         content="Galería Lavalle - El centro comercial más completo de la ciudad. Descubre nuestros locales, servicios, entretenimiento y gastronomía en el corazón de Buenos Aires.">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Galería Lavalle | Centro Comercial">
     <meta property="og:description"
         content="El centro comercial más completo de la ciudad. Descubre nuestros locales, servicios, entretenimiento y gastronomía.">
@@ -17,22 +16,17 @@
     <meta property="og:url" content="https://galeria-lavalle.com">
     <meta property="og:type" content="website">
 
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏬</text></svg>">
 </head>
 
 <body>
-    <!-- Skip Link -->
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-    <!-- Header -->
     <header class="header" role="banner">
         <div class="container">
             <div class="header-content">
@@ -60,9 +54,7 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main id="main-content">
-        <!-- Hero Section -->
         <section class="hero" aria-labelledby="hero-title">
             <div class="container">
                 <div class="hero-content">
@@ -77,8 +69,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- Video Presentation -->
+        
         <section class="section" aria-labelledby="video-title">
             <div class="container">
                 <h2 id="video-title" class="section-title">Conoce Nuestra Galería</h2>
@@ -97,8 +88,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Featured Sections -->
         <section class="section" aria-labelledby="features-title">
             <div class="container">
                 <h2 id="features-title" class="section-title">¿Qué Encontrarás Aquí?</h2>
@@ -148,8 +137,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- Featured Stores -->
+        
         <section class="section" style="background: #f8fafc;" aria-labelledby="stores-title">
             <div class="container">
                 <h2 id="stores-title" class="section-title">Locales Destacados</h2>
@@ -251,8 +239,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- Services Preview -->
+        
         <section class="section" aria-labelledby="services-title">
             <div class="container">
                 <h2 id="services-title" class="section-title">Nuestros Servicios</h2>
@@ -288,8 +275,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- Call to Action -->
+        
         <section class="section" style="background: var(--primary); color: white;" aria-labelledby="cta-title">
             <div class="container" style="text-align: center;">
                 <h2 id="cta-title">¿Listo para Visitarnos?</h2>
@@ -306,7 +292,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
@@ -357,9 +342,7 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script>
-        // Mobile navigation toggle
         document.addEventListener('DOMContentLoaded', function () {
             const mobileToggle = document.querySelector('.mobile-nav-toggle');
             const navList = document.querySelector('.nav-list');
@@ -370,11 +353,9 @@
                     this.setAttribute('aria-expanded', !isExpanded);
                     navList.classList.toggle('active');
 
-                    // Update button text for screen readers
                     this.textContent = isExpanded ? '☰' : '✕';
                 });
 
-                // Close menu when clicking outside
                 document.addEventListener('click', function (e) {
                     if (!mobileToggle.contains(e.target) && !navList.contains(e.target)) {
                         mobileToggle.setAttribute('aria-expanded', 'false');
@@ -382,8 +363,7 @@
                         mobileToggle.textContent = '☰';
                     }
                 });
-
-                // Close menu on escape key
+        
                 document.addEventListener('keydown', function (e) {
                     if (e.key === 'Escape' && navList.classList.contains('active')) {
                         mobileToggle.setAttribute('aria-expanded', 'false');
@@ -395,7 +375,6 @@
             }
         });
 
-        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -409,7 +388,6 @@
             });
         });
 
-        // Add fade-in animation to cards when they come into view
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
