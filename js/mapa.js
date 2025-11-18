@@ -207,6 +207,7 @@ class GaleriaMap {
       'game-store': 'G',
       'apicultura': 'M',
       'importGiper': 'I',
+      'vinoteca': 'V',
     };
     return initials[local.id] || local.nombre.charAt(0).toUpperCase();
   }
