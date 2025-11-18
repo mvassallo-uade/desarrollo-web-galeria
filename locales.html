@@ -30,7 +30,13 @@
       top: 100px;
       height: fit-content;
     }
-    
+    @media (max-width:768px) {
+      .map-section {
+        position: static;
+        top: auto;
+      }
+      
+    }
     .search-filters {
       display: flex;
       gap: 1rem;
@@ -130,6 +136,9 @@
       fill: var(--accent) !important;
       r: 10 !important;
     }
+    .map-pin:focus{
+      outline: none;
+    }
     
     .card.highlighted {
       transform: translateY(-2px);
@@ -208,9 +217,9 @@
         <button type="button" class="filter-btn active" data-filter="all">Todos</button>
         <button type="button" class="filter-btn" data-filter="barbería">Barbería</button>
         <button type="button" class="filter-btn" data-filter="videojuegos">Videojuegos</button>
-        <button type="button" class="filter-btn" data-filter="indumentaria">Indumentaria</button>
         <button type="button" class="filter-btn" data-filter="apicultura">Apicultura</button>
-        <button type="button" id="reset-search" class="btn btn-secondary">Limpiar Filtros</button>
+        <button type="button" class="filter-btn" data-filter="bazar">Bazar </button>
+        <button type="button" id="reset-search" class="btn btn-tertiary">Limpiar Filtros</button>
       </div>
 
       <!-- ARIA live region for search results announcements -->

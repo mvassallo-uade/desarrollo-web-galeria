@@ -32,22 +32,6 @@
     "imagen": "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    "id": "indumentaria",
-    "nombre": "Style Zone",
-    "rubro": "Indumentaria",
-    "ubicacion": "Lavalle 1498, Local 8",
-    "pasillo": "A",
-    "x": 30,
-    "y": 25,
-    "url": "./indumentaria/index.html",
-    "ofertas": true,
-    "accesibilidad": ["probadores accesibles", "pago sin contacto"],
-    "descripcion": "Moda urbana y casual para todas las edades. Encuentra tu estilo único.",
-    "horarios": "Lunes a sábados de 9 a 21 hs",
-    "telefono": "+54 11 5555-0123",
-    "imagen": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  }, 
-  {
     "id": "apicultura",
     "nombre": "Api.ar",
     "rubro": "Apicultura",
@@ -62,5 +46,21 @@
     "horarios": "Martes a sábados de 11 a 19 hs",
     "telefono": "+54 11 4567-8910",
     "imagen": "https://polinizadores.com/imagenes/contenidos/2021-02/Foto-miel.jpg"
+  },
+  {
+    "id": "importGiper",
+    "nombre": "Import Giper",
+    "rubro": "Bazar",
+    "ubicacion": "Lavalle 1498, Local 2",
+    "pasillo": "B",
+    "x": 80,
+    "y": 70,
+    "url": "./importGiper/index.html",
+    "ofertas": true,
+    "accesibilidad": ["compra online", "pago sin contacto"],
+    "descripcion": "Articulos de bazar para todos los gustos y al mejor precio.",
+    "horarios": "Luneas a sábados de 10 a 19 hs",
+    "telefono": "+54 11 2270-9988",
+    "imagen": "https://images.unsplash.com/photo-1571987530791-58e3e7744d99?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ]

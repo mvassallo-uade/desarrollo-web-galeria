@@ -205,8 +205,8 @@ class GaleriaMap {
     const initials = {
       'focuz': 'F',
       'game-store': 'G',
-      'indumentaria': 'S',
-      'apicultura': 'M'
+      'apicultura': 'M',
+      'importGiper': 'I',
     };
     return initials[local.id] || local.nombre.charAt(0).toUpperCase();
   }
@@ -416,7 +416,7 @@ class GaleriaMap {
           </div>
           
           <div class="local-actions">
-            <button type="button" class="btn btn-secondary" 
+            <button type="button" class="btn btn-tertiary" 
                     onclick="galeriaMap.selectLocal('${local.id}')"
                     aria-label="Ver ${local.nombre} en el mapa">
               Ver en mapa

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImportGiper</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="./images/Logo.png" alt="Logo" class="logo">
+            <p>Import-Giper</p>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="./index.html" class="link">Inicio</a></li>
+                <li><a href="./sobre-nosotros.html" class="link">Nosotros</a></li>
+                <li><a href="./productos.html" class="link">Productos</a></li>
+                <li><a href="./promociones.html" class="link active">Promociones</a></li>
+                <li><a href="./contacto.html" class="link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="promociones-hero">
+            <h1>Promociones Especiales</h1>
+            <p>Aprovechá nuestras increíbles ofertas y descubrí cuánto podés ahorrar en tus compras</p>
+        </section>
+        <div class="promociones-container">
+            <div class="promo-card">
+                <div class="promo-header promo-1">
+                    <h2>Promoción 2x1 Especial</h2>
+                    <p>Llevá 2 productos y obtené 50% de descuento en el segundo</p>
+                    <p class="promo-description">El descuento se aplica automáticamente sobre el producto de menor
+                        precio.</p>
+                </div>
+                <div class="promo-body">
+                    <form id="promo1Form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="promo1-product1">Primer Producto</label>
+                                <select id="promo1-product1" class="promo-select" required>
+                                    <option value="">Seleccioná un producto</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="promo1-product2">Segundo Producto</label>
+                                <select id="promo1-product2" class="promo-select" required>
+                                    <option value="">Seleccioná un producto</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="promo-button promo-1">Calcular Ahorro</button>
+                    </form>
+                    <div id="promo1Result" class="result-box">
+                        <div class="result-row">
+                            <span class="result-label">Total sin descuento:</span>
+                            <span class="result-value" id="promo1-total">$0</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Descuento aplicado (50%):</span>
+                            <span class="result-value result-discount" id="promo1-discount">-$0</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Total a pagar:</span>
+                            <span class="result-value result-total" id="promo1-final">$0</span>
+                        </div>
+                        <div class="savings-badge" id="promo1-savings">
+                            Ahorrás $0!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="promo-card">
+                <div class="promo-header promo-2">
+                    <h2>Promoción 3x2</h2>
+                    <p>Llevá 3 productos y pagá solo 2</p>
+                    <p class="promo-description">El producto de menor precio es gratis. Ideal para renovar toda tu
+                        cocina.</p>
+                </div>
+                <div class="promo-body">
+                    <form id="promo2Form">
+                        <div class="form-row-3">
+                            <div class="form-group">
+                                <label for="promo2-product1">Producto 1</label>
+                                <select id="promo2-product1" class="promo-select" required>
+                                    <option value="">Seleccioná un producto</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="promo2-product2">Producto 2</label>
+                                <select id="promo2-product2" class="promo-select" required>
+                                    <option value="">Seleccioná un producto</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="promo2-product3">Producto 3</label>
+                                <select id="promo2-product3" class="promo-select" required>
+                                    <option value="">Seleccioná un producto</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="promo-button promo-2">Calcular Ahorro</button>
+                    </form>
+                    <div id="promo2Result" class="result-box">
+                        <div class="result-row">
+                            <span class="result-label">Total sin descuento:</span>
+                            <span class="result-value" id="promo2-total">$0</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Descuento aplicado (producto gratis):</span>
+                            <span class="result-value result-discount" id="promo2-discount">-$0</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Total a pagar:</span>
+                            <span class="result-value result-total" id="promo2-final">$0</span>
+                        </div>
+                        <div class="savings-badge" id="promo2-savings">
+                            ¡Ahorrás $0!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="promo-card">
+                <div class="promo-header promo-3">
+                    <h2>Descuento por Compra Mayor</h2>
+                    <p>10% de descuento en compras superiores a $30.000</p>
+                    <p class="promo-description">Agregá todos los productos que quieras. Si superás los $30.000, obtenés
+                        el descuento automáticamente.</p>
+                </div>
+                <div class="promo-body">
+                    <form id="promo3Form">
+                        <div id="promo3ItemsContainer" class="dynamic-items-container">
+                            <!-- Los items se agregan dinámicamente con JavaScript -->
+                        </div>
+                        <button type="button" class="add-item-button" id="addItemBtn">
+                            + Agregar otro producto
+                        </button>
+                        <button type="submit" class="promo-button promo-3">Calcular Ahorro</button>
+                    </form>
+                    <div id="promo3Result" class="result-box">
+                        <div class="result-row">
+                            <span class="result-label">Total sin descuento:</span>
+                            <span class="result-value" id="promo3-total">$0</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Descuento aplicado (10%):</span>
+                            <span class="result-value result-discount" id="promo3-discount">-$0</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Total a pagar:</span>
+                            <span class="result-value result-total" id="promo3-final">$0</span>
+                        </div>
+                        <div class="savings-badge" id="promo3-savings">
+                            ¡Ahorrás $0!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="promo3ItemTemplate" class="item-row" style="display: none;">
+            <div class="form-group">
+                <label>Producto</label>
+                <select class="promo-select promo3-product" required>
+                    <option value="">Seleccioná un producto</option>
+                </select>
+            </div>
+            <div class="form-group quantity-input">
+                <label>Cantidad</label>
+                <input type="number" class="promo-input promo3-quantity" min="1" value="1" required>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-sections">
+            <div class="footer-information">
+                <h3 class="footer-title">Import-Giper</h3>
+                <p>Tu tienda de confianza para artículos de bazar.</p>
+            </div>
+            <div>
+                <h3 class="footer-title">Contacto</h3>
+                <div class="footer-contact">
+                    <span class="material-icons">location_on</span>
+                    <p>Galeria Central, Local 22.</p>
+                </div>
+                <div class="footer-contact">
+                    <span class="material-icons">phone</span>
+                    <p>+54 9 11 1234-5678</p>
+                </div>
+                <div class="footer-contact">
+                    <span class="material-icons">email</span>
+                    <p>contacto@import-giper.com</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="footer-title">Seguinos</h3>
+                <div class="footer-social-link">
+                    <span class="material-icons">public</span>
+                    <p>/importgiper</p>
+                </div>
+                <div class="footer-social-link">
+                    <span class="material-icons">photo_camera</span>
+                    <p>@importgiper</p>
+                </div>
+                <div class="footer-social-link">
+                    <span class="material-icons">chat_bubble</span>
+                    <p>@importgiper</p>
+                </div>
+            </div>
+        </div>
+        <p class="footer-copyright">&copy; 2025 Import-Giper by Sarah Alfonsin. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./promociones.js"></script>
+</body>
+
+</html>

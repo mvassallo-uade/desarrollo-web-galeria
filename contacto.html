@@ -459,6 +459,20 @@
         return 'Sí, tenemos estacionamiento gratuito las primeras 3 horas. Después aplicamos tarifas preferenciales.';
       } else if (lowerMessage.includes('wifi')) {
         return 'Tenemos WiFi gratuito en toda la galería. La red es "GaleriaLavalle_Free" sin contraseña.';
+      } else if( lowerMessage.includes('accesible')) {
+        return 'Sí, nuestra galería es accesible para personas con discapacidad, con rampas, ascensores y baños adaptados.';
+      } else if (lowerMessage.includes('gracias') || lowerMessage.includes('thank you')) {
+        return '¡De nada! Si tienes más preguntas, no dudes en preguntar.';
+      } else if (lowerMessage.includes('hola') || lowerMessage.includes('buenas')) {
+        return '¡Hola! ¿En qué puedo ayudarte hoy?';
+      } else if (lowerMessage.includes('oferta') || lowerMessage.includes('promoción')) {
+        return 'Actualmente tenemos varias ofertas en locales seleccionados. Visita nuestra sección de ofertas para más detalles.';
+      }else if (lowerMessage.includes('evento')) {
+        return 'Para organizar un evento, por favor contáctanos al email eventos@galerialavalle.com';
+      } else if (lowerMessage.includes('queja') || lowerMessage.includes('reclamo')) {
+        return 'Lamentamos cualquier inconveniente. Por favor envíanos los detalles de tu queja a quejas@galerialavalle.com';
+      } else if (lowerMessage.includes('ayuda')) {
+        return 'Claro, estoy aquí para ayudarte. ¿Qué necesitas saber?';
       } else {
         return 'Gracias por tu consulta. Para información más específica, puedes contactarnos al +54 11 1234-5678 o visitar nuestro centro de atención.';
       }
