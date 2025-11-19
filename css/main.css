@@ -238,6 +238,15 @@ a:focus-visible {
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
+.hero-logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 2rem;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+  padding: 8px;
+}
+
 .hero p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
