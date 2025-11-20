@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Locales Comerciales | Galería Lavalle</title>
-  <meta name="description" content="Descubre todos los locales comerciales de Galería Lavalle. Mapa interactivo, buscador y información detallada de cada tienda.">
-  
+  <meta name="description"
+    content="Descubre todos los locales comerciales de Galería Lavalle. Mapa interactivo, buscador y información detallada de cada tienda.">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="css/main.css">
   <style>
     .locales-container {
@@ -16,32 +18,34 @@
       gap: 2rem;
       margin-top: 2rem;
     }
-    
+
     @media (max-width: 768px) {
       .locales-container {
         grid-template-columns: 1fr;
       }
     }
-    
+
     .map-section {
       position: sticky;
       top: 100px;
       height: fit-content;
     }
+
     @media (max-width:768px) {
       .map-section {
         position: static;
         top: auto;
       }
-      
+
     }
+
     .search-filters {
       display: flex;
       gap: 1rem;
       margin-bottom: 2rem;
       flex-wrap: wrap;
     }
-    
+
     .filter-btn {
       padding: 0.5rem 1rem;
       border: 2px solid var(--border);
@@ -50,13 +54,14 @@
       cursor: pointer;
       transition: all 0.2s ease;
     }
-    
-    .filter-btn:hover, .filter-btn.active {
+
+    .filter-btn:hover,
+    .filter-btn.active {
       background: var(--primary);
       color: white;
       border-color: var(--primary);
     }
-    
+
     @media (prefers-color-scheme: dark) {
       .filter-btn {
         background: #1e293b;
@@ -64,23 +69,24 @@
         color: var(--text-light);
       }
     }
-    
+
     .local-card {
       margin-bottom: 1.5rem;
     }
-    
+
     .local-rubro {
       color: var(--primary);
       font-weight: 500;
       margin-bottom: 0.5rem;
     }
-    
-    .local-ubicacion, .local-horarios {
+
+    .local-ubicacion,
+    .local-horarios {
       font-size: 0.9rem;
       color: var(--text-muted);
       margin-bottom: 0.5rem;
     }
-    
+
     .ofertas-badge {
       background: var(--success);
       color: white;
@@ -89,7 +95,7 @@
       font-size: 0.8rem;
       font-weight: 500;
     }
-    
+
     .accesibilidad-tag {
       background: #e0f2fe;
       color: #0277bd;
@@ -100,55 +106,56 @@
       margin-bottom: 0.25rem;
       display: inline-block;
     }
-    
+
     @media (prefers-color-scheme: dark) {
       .accesibilidad-tag {
         background: #1e3a8a;
         color: #93c5fd;
       }
     }
-    
+
     .local-accesibilidad {
       margin: 1rem 0;
     }
-    
+
     .local-actions {
       display: flex;
       gap: 0.5rem;
       margin-top: 1rem;
     }
-    
+
     .no-results {
       text-align: center;
       padding: 3rem 1rem;
       color: var(--text-muted);
     }
-    
+
     .error-message {
       text-align: center;
       padding: 3rem 1rem;
       color: var(--error);
     }
-    
+
     .map-pin.highlighted circle {
       fill: var(--accent) !important;
       r: 10 !important;
     }
-    .map-pin:focus{
+
+    .map-pin:focus {
       outline: none;
     }
-    
+
     .card.highlighted {
       transform: translateY(-2px);
       box-shadow: 0 8px 25px rgba(30, 64, 175, 0.2);
     }
-    
+
     .map-pin.selected circle {
       fill: var(--error) !important;
       r: 12 !important;
     }
   </style>
-  
+
   <link rel="icon" type="image/png" href="assets/img/logo.png">
 </head>
 
@@ -162,7 +169,7 @@
           <img src="assets/img/logo.png" alt="Logo Galeria">
           <span>Galería Lavalle</span>
         </a>
-        
+
         <nav role="navigation" aria-label="Navegación principal">
           <ul class="nav-list" id="nav-list">
             <li><a href="index.html" class="nav-link">Inicio</a></li>
@@ -173,8 +180,9 @@
             <li><a href="gastronomia.html" class="nav-link">Gastronomía</a></li>
             <li><a href="contacto.html" class="nav-link">Contacto</a></li>
           </ul>
-          
-          <button class="mobile-nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menú de navegación">
+
+          <button class="mobile-nav-toggle" aria-expanded="false" aria-controls="nav-list"
+            aria-label="Abrir menú de navegación">
             ☰
           </button>
         </nav>
@@ -183,39 +191,39 @@
   </header>
 
   <main id="main-content">
-    <section class="section" style="padding-top: 2rem; padding-bottom: 1rem;">
+    <section class="hero" style="min-height: 40vh;" aria-labelledby="hero-title">
       <div class="container">
-        <h1>Locales Comerciales</h1>
-        <p>Descubre todos nuestros locales comerciales. Usa el mapa interactivo y el buscador para encontrar exactamente lo que necesitas.</p>
+        <div class="hero-content">
+          <h1 id="hero-title">Locales Comerciales</h1>
+          <p>Descubre todos nuestros locales comerciales. Usa el mapa interactivo y el buscador para encontrar
+            exactamente lo que necesitas.</p>
+        </div>
       </div>
     </section>
 
-    <section class="container">
-      <div class="search-container">
-        <label for="search-locales" class="form-label">Buscar locales</label>
-        <input 
-          type="search" 
-          id="search-locales" 
-          class="search-input" 
-          placeholder="Busca por nombre, rubro o ubicación..."
-          aria-describedby="search-help"
-        >
-        <div id="search-help" class="sr-only">
-          Busca locales por nombre o rubro. Los resultados se actualizarán automáticamente.
+    <section class="section">
+      <div class="container">
+        <div class="search-container">
+          <label for="search-locales" class="form-label">Buscar locales</label>
+          <input type="search" id="search-locales" class="search-input"
+            placeholder="Busca por nombre, rubro o ubicación..." aria-describedby="search-help">
+          <div id="search-help" class="sr-only">
+            Busca locales por nombre o rubro. Los resultados se actualizarán automáticamente.
+          </div>
         </div>
-      </div>
 
-      <div class="search-filters">
-        <button type="button" class="filter-btn active" data-filter="all">Todos</button>
-        <button type="button" class="filter-btn" data-filter="barbería">Barbería</button>
-        <button type="button" class="filter-btn" data-filter="videojuegos">Videojuegos</button>
-        <button type="button" class="filter-btn" data-filter="apicultura">Apicultura</button>
-        <button type="button" class="filter-btn" data-filter="bazar">Bazar </button>
-        <button type="button" class="filter-btn" data-filter="vinoteca">Vinoteca</button>
-        <button type="button" id="reset-search" class="btn btn-tertiary">Limpiar Filtros</button>
-      </div>
+        <div class="search-filters">
+          <button type="button" class="filter-btn active" data-filter="all">Todos</button>
+          <button type="button" class="filter-btn" data-filter="barbería">Barbería</button>
+          <button type="button" class="filter-btn" data-filter="videojuegos">Videojuegos</button>
+          <button type="button" class="filter-btn" data-filter="apicultura">Apicultura</button>
+          <button type="button" class="filter-btn" data-filter="bazar">Bazar </button>
+          <button type="button" class="filter-btn" data-filter="vinoteca">Vinoteca</button>
+          <button type="button" id="reset-search" class="btn btn-tertiary">Limpiar Filtros</button>
+        </div>
 
-      <div id="search-results-announcer" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+        <div id="search-results-announcer" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+      </div>
     </section>
 
     <section class="section">
@@ -225,7 +233,7 @@
             <h2>Mapa de la Galería</h2>
             <div class="map-container" id="map-container" role="application" aria-label="Mapa interactivo de locales">
             </div>
-            
+
             <div style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
               <p><strong>Instrucciones:</strong></p>
               <ul style="margin-left: 1rem;">
@@ -252,7 +260,7 @@
     <section class="section" style="background: #f8fafc;">
       <div class="container">
         <h2 class="section-title">Información Adicional</h2>
-        
+
         <div class="grid grid-3">
           <div class="card">
             <div class="card-content">
@@ -305,7 +313,7 @@
           <p>📍 Lavalle 1498, CABA</p>
           <p>📞 +54 11 1234-5678</p>
         </div>
-        
+
         <div class="footer-section">
           <h3>Horarios</h3>
           <ul>
@@ -314,7 +322,7 @@
             <li>Feriados: 14:00 - 20:00</li>
           </ul>
         </div>
-        
+
         <div class="footer-section">
           <h3>Enlaces Rápidos</h3>
           <ul>
@@ -324,7 +332,7 @@
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </div>
-        
+
         <div class="footer-section">
           <h3>Síguenos</h3>
           <ul>
@@ -334,12 +342,12 @@
           </ul>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
         <p>&copy; 2025 Galería Lavalle. Todos los derechos reservados.</p>
         <p>
-          <a href="#sitemap">Mapa del Sitio</a> | 
-          <a href="#privacy">Política de Privacidad</a> | 
+          <a href="#sitemap">Mapa del Sitio</a> |
+          <a href="#privacy">Política de Privacidad</a> |
           <a href="#terms">Términos y Condiciones</a>
         </p>
       </div>
@@ -348,27 +356,27 @@
 
   <script src="js/mapa.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const mobileToggle = document.querySelector('.mobile-nav-toggle');
       const navList = document.querySelector('.nav-list');
-      
+
       if (mobileToggle && navList) {
-        mobileToggle.addEventListener('click', function() {
+        mobileToggle.addEventListener('click', function () {
           const isExpanded = this.getAttribute('aria-expanded') === 'true';
           this.setAttribute('aria-expanded', !isExpanded);
           navList.classList.toggle('active');
           this.textContent = isExpanded ? '☰' : '✕';
         });
-        
-        document.addEventListener('click', function(e) {
+
+        document.addEventListener('click', function (e) {
           if (!mobileToggle.contains(e.target) && !navList.contains(e.target)) {
             mobileToggle.setAttribute('aria-expanded', 'false');
             navList.classList.remove('active');
             mobileToggle.textContent = '☰';
           }
         });
-        
-        document.addEventListener('keydown', function(e) {
+
+        document.addEventListener('keydown', function (e) {
           if (e.key === 'Escape' && navList.classList.contains('active')) {
             mobileToggle.setAttribute('aria-expanded', 'false');
             navList.classList.remove('active');
@@ -387,4 +395,5 @@
     });
   </script>
 </body>
+
 </html>
