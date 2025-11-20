@@ -12,7 +12,7 @@
       <img src="img/logo.png" alt="CuevaGeeks logo" width="48" height="48">
       <span>CuevaGeeks</span>
     </a>
-    <input id="menu-toggle" type="checkbox"/>
+    <input id="menu-toggle" type="checkbox" />
     <label class="menu-icon" for="menu-toggle">☰</label>
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ul>
@@ -24,14 +24,16 @@
       </ul>
     </nav>
   </header>
+
   <main>
     <div class="section">
       <h1 class="section-title">Promociones vigentes</h1>
       <p class="section-content">
-        Elegí producto y cantidad para ver el descuento aplicado automáticamente. 
-        Los resultados se actualizan al instante.
+        Elegí producto y cantidad para ver el descuento aplicado automáticamente.  
+        Los montos se calculan en pesos argentinos (ARS) y se actualizan al instante.
       </p>
     </div>
+
     <div class="cards">
       <article class="card" aria-labelledby="promoA">
         <div class="card-content">
@@ -39,8 +41,10 @@
             Llevá 2 y obtené 50% en el segundo <span class="promo-badge">Accesorios</span>
           </h2>
           <p class="card-description">
+            Ideal para sumar un headset, un joystick extra o una alfombrilla grande.
             Aplica por pares del mismo producto. Por cada 2 accesorios, el segundo tiene 50% de descuento.
           </p>
+
           <form class="form-promo" id="formA">
             <div class="form-group">
               <label for="productoA">Accesorio</label>
@@ -54,9 +58,10 @@
             </div>
             <div class="form-group">
               <label for="cantidadA">Cantidad</label>
-              <input type="number" id="cantidadA" name="cantidadA" min="1" value="1" required>
+              <input type="number" id="cantidadA" name="cantidadA" min="2" value="2" required>
             </div>
           </form>
+
           <div class="section-content results" aria-live="polite">
             <p><strong>Total sin descuento:</strong> <span id="subtotalA">$0</span></p>
             <p><strong>Descuento aplicado:</strong> <span id="descuentoA">$0</span></p>
@@ -68,7 +73,7 @@
       <article class="card" aria-labelledby="promoB">
         <div class="card-content">
           <h2 id="promoB" class="card-title">
-            3x2 en juegos seleccionados <span class="promo-badge">Juegos</span>
+            3×2 en juegos físicos <span class="promo-badge">Juegos</span>
           </h2>
           <p class="card-description">
             Elegí tres juegos (podés repetir). <strong>El más barato de los tres sale gratis.</strong>
@@ -158,6 +163,7 @@
   <footer>
     <p>&copy; 2025 CuevaGeeks. Todos los derechos reservados.</p>
   </footer>
+
   <script src="promociones.js"></script>
 </body>
 </html>

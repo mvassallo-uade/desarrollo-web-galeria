@@ -12,7 +12,7 @@
       <img src="img/logo.png" alt="CuevaGeeks logo" width="48" height="48">
       <span>CuevaGeeks</span>
     </a>
-    <input id="menu-toggle" type="checkbox"/>
+    <input id="menu-toggle" type="checkbox" />
     <label class="menu-icon" for="menu-toggle">☰</label>
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ul>
@@ -24,40 +24,76 @@
       </ul>
     </nav>
   </header>
+
   <main>
     <div class="section">
-      <h1 class="section-title">Ubicación y Contacto</h1>
-      <div class="section-content contact">
-        <li><strong>Teléfono:</strong> (011) 12345678</li>
-        <li><strong>Email:</strong> contacto@gamehub.com</li>
-        <li><strong>Redes:</strong> @GameHubAR en Instagram, Twitter y Facebook</li>
-        <li><strong>Dirección:</strong> Lavalle 1498, local numero 3 dentro de la galería</li>
-        <form action="mailto:saferreyra@uade.edu.ar" method="post" class="mt-2">
-          <div class="form-group">
-            <label for="fname">Nombre:</label>
-            <input type="text" id="fname" name="nombre" required><br>
+      <h1 class="section-title">Contacto y ubicación</h1>
+      <p class="section-content">
+        Si querés consultar stock, precios o reservar un producto, podés escribirnos por el formulario,
+        por WhatsApp o visitarnos directamente en la galería.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="cards">
+
+        <article class="card">
+          <div class="card-content">
+            <h2 class="card-title">Visitános en la galería</h2>
+            <p class="card-description">
+              <strong>Dirección:</strong> Lavalle 1498, CABA  
+              (dentro de Galería Lavalle).
+            </p>
+            <p class="card-description">
+              <strong>Horarios:</strong><br>
+              Lunes a Sábados: 10:00 – 20:00<br>
+              Domingos y feriados: consultar redes.
+            </p>
+            <p class="card-description">
+              <strong>Teléfono:</strong> +54 11 1234-5678<br>
+              <strong>WhatsApp:</strong> +54 9 11 1234-5678<br>
+              <strong>Instagram:</strong> @cuevageeks
+            </p>
           </div>
-          <div class="form-group">
-            <label for="lname">Apellido:</label>
-            <input type="text" id="lname" name="apellido" required><br>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <h2 class="card-title">Escribinos tu consulta</h2>
+            <p class="card-description">
+              Completá el formulario y te respondemos a la brevedad
+              con precio actualizado, formas de pago y disponibilidad.
+            </p>
+
+            <form action="#" method="post">
+              <div class="form-group">
+                <label for="name">Nombre y apellido:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="ldate">Edad:</label>
+               <input type="number" id="ldate" name="edad" max="99" min="13" required><br>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+              </div>
+
+              <input type="submit" value="Enviar consulta" class="button">
+            </form>
           </div>
-          <div class="form-group">
-            <label for="ldate">Edad:</label>
-            <input type="number" id="ldate" name="edad" max="99" min="13" required><br>
-          </div>
-          <div class="form-group">
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required><br>
-          </div>
-          <div class="form-group">
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-          </div>
-          <input type="submit" value="Enviar consulta" class="button">
-        </form>
+        </article>
       </div>
     </div>
   </main>
+
   <footer>
     <p>&copy; 2025 CuevaGeeks. Todos los derechos reservados.</p>
   </footer>
