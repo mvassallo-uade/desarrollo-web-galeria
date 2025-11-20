@@ -88,29 +88,38 @@ class GaleriaMap {
     this.setupMapKeyboardNavigation();
   }
 
-  setupMapKeyboardNavigation() {
-    const mapPins = document.querySelectorAll('.map-pin');
-    mapPins.forEach((pin, index) => {
-      pin.setAttribute('tabindex', '0');
-      pin.setAttribute('role', 'button');
-      pin.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          this.selectLocal(pin.dataset.localId);
-        }
-        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-          e.preventDefault();
-          const nextPin = mapPins[index + 1] || mapPins[0];
-          nextPin.focus();
-        }
-        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-          e.preventDefault();
-          const prevPin = mapPins[index - 1] || mapPins[mapPins.length - 1];
-          prevPin.focus();
-        }
-      });
+setupMapKeyboardNavigation() {
+  const mapPins = document.querySelectorAll('.map-pin');
+  mapPins.forEach((pin, index) => {
+    pin.setAttribute('tabindex', '0');
+    pin.setAttribute('role', 'button');
+
+    pin.addEventListener('focus', () => {
+      this.highlightLocal(pin.dataset.localId);
     });
-  }
+
+    pin.addEventListener('blur', () => {
+      this.removeHighlight();
+    });
+
+    pin.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.selectLocal(pin.dataset.localId);
+      }
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        const nextPin = mapPins[index + 1] || mapPins[0];
+        nextPin.focus();
+      }
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        const prevPin = mapPins[index - 1] || mapPins[mapPins.length - 1];
+        prevPin.focus();
+      }
+    });
+  });
+}
 
   handleSearch(event) {
     const query = event.target.value.toLowerCase().trim();

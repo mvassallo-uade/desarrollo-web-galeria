@@ -287,6 +287,12 @@ a:focus-visible {
   color: var(--primary);
   border: none;
 }
+.btn-quaternary {
+  background: white;
+  color: var(--primary);
+  border: 2px solid white;
+}
+
 .btn-tertiary:hover, .btn-tertiary:focus {
   background: var(--primary);
   color: white;
@@ -295,7 +301,10 @@ a:focus-visible {
   background: white;
   color: var(--primary);
 }
-
+.btn-quaternary:hover, .btn-quaternary:focus {
+  background: var(--primary);
+  color: white;
+}
 .btn-group {
   display: flex;
   gap: 1rem;
